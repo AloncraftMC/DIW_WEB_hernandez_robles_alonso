@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goal Tracker - Landing</title>
+    <link rel="stylesheet" href="styles/landingPageStyle.css">
+
+</head>
+<body>
+
+    <script src="scripts/userFunctions.js"></script>
+    <script src="scripts/landingPageScript.js"></script>
+
+    <main>
+
+        <p class="titulo-goal-tracker">Goal<br>Tracker</p>
+        <p class="subtitulo-crea-gestiona">Crea y gestiona<br>tus propios objetivos</p>
+        
+        <div class="botones">
+            <button class="boton boton-blanco" onclick="openLoginWindow()">Iniciar Sesión</button>
+            <button class="boton boton-azul" onclick="openRegisterWindow()">Registrarse</button>
+        </div>
+        
+    </main>
+
+    <div class="ventana-login" id="loginWindow">
+        
+        <form class="contenido-ventana" onsubmit="event.preventDefault(); login();">
+
+            <p class="titulo-ventana">Iniciar Sesión</p>
+
+            <label for="loginUser">Usuario:</label>
+            <input type="text" id="loginUser" required>
+
+            <label for="loginPassword">Contraseña:</label>
+            <input type="password" id="loginPassword" required>
+
+            <p id="userNotFound">No se ha encontrado el usuario.</p>
+            <p id="incorrectPassword">La contraseña es incorrecta.</p>
+
+            <div class="botones-ventana">
+                <input type="submit" class="boton boton-azul" value="Entrar">
+            </div>
+
+        </form>
+
+    </div>
+
+    <div class="ventana-registro" id="registerWindow">
+
+        <form class="contenido-ventana" onsubmit="event.preventDefault(); register();">
+
+            <p class="titulo-ventana">Registrarse</p>
+
+            <label for="registerUser">Usuario:</label>
+            <input type="text" id="registerUser" required>
+
+            <label for="registerPassword">Contraseña:</label>
+            <input type="password" id="registerPassword" pattern="^.{8,}$" required>
+
+            <label for="registerPasswordConfirm">Repetir contraseña:</label>
+            <input type="password" id="registerPasswordConfirm" pattern="^.{8,}$" required>
+            
+            <p id="passwordNotLongEnough">Las contraseña debe tener 8 caracteres como mínimo</p>
+            <p id="passwordsDontMatch">Las contraseñas no coinciden.</p>
+            <p id="userAlreadyRegistered">Este usuario ya se encuentra registrado.</p>
+
+            <div class="botones-ventana">
+                <input type="submit" class="boton boton-azul" value="Iniciar sesión">
+            </div>
+
+        </form>
+        
+    </div>
+    
+</body>
+</html>

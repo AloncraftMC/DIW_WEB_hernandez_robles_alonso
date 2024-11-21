@@ -38,12 +38,12 @@ Se ha seguido la estructura de directorios **típica** para el desarrollo de la 
     - `landingPageScript.js`
 - **media**
     - `favicon.ico`
-    - `fonts`
+    - fonts
         - `Rubik-Light.ttf`
         - `Rubik-Regular.ttf`
         - `Rubik-Medium.ttf`
-    - `images`
+    - images
         - `landingPageBackground.png`
         - `contactoBackground.png`
         - `tutorialesBackground.png`
-    - `videos`
+    - videos

@@ -16,9 +16,9 @@ Usando HTML y CSS, crea tu página de inicio y tu página de aterrizaje. Las sig
 
 ### Versión Definitiva y Adaptabilidad
 
-Se ha realizado la versión definitiva de la _Landing Page_ en el archivo `index.html` y es adaptable a tres formatos concretos definidos en el archivo `landingPageStyles.css`.
+Se ha realizado la versión definitiva de la _Landing Page_ en el archivo `index.html` y es adaptable a tres formatos de dispositivos variables definidos en el archivo `landingPageStyles.css`.
 
-### Subida a cuenta de GitHub
+### Subida a Cuenta de GitHub
 
 El repositorio permanece en la URL bajo el nombre de [DIW_WEB_hernandez_robles_alonso](https://github.com/AloncraftMC/DIW_WEB_hernandez_robles_alonso).
 
@@ -27,23 +27,23 @@ El repositorio permanece en la URL bajo el nombre de [DIW_WEB_hernandez_robles_a
 Se ha seguido la estructura de directorios **típica** para el desarrollo de la página web. Los elementos en cursiva no se implementan en este nivel.
 
 - **`index.html`**
-- **`pages`**
+- **pages**
     - _`editor.html`_
     - _`contacto.html`_
     - _`tutoriales.html`_
-- **`styles`**
+- **styles**
     - `landingPageStyle.css`
-- **`scripts`**
+- **scripts**
     - `userFunctions.js`
     - `landingPageScript.js`
-- **`media`**
-    - **`favicon.ico`**
-    - **`fonts`**
+- **media**
+    - `favicon.ico`
+    - `fonts`
         - `Rubik-Light.ttf`
         - `Rubik-Regular.ttf`
         - `Rubik-Medium.ttf`
-    - **`images`**
+    - `images`
         - `landingPageBackground.png`
         - `contactoBackground.png`
         - `tutorialesBackground.png`
-    - **`videos`**
+    - `videos`

@@ -47,3 +47,7 @@ Se ha seguido la estructura de directorios **típica** para el desarrollo de la 
         - `contactoBackground.png`
         - `tutorialesBackground.png`
     - _videos_
+
+### Requisitos de Documentación
+
+Esta parte se puede ver en la documentación del proyecto.

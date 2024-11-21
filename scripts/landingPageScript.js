@@ -3,7 +3,9 @@
 function redirect() {
 
     if(getCurrentUser() != null){
-        window.location.href = "pages/editor.html";
+        
+        // window.location.href = "pages/editor.html"; (=> Después de Tarea 9)
+    
     }
     
 }
@@ -57,16 +59,22 @@ function openRegisterWindow() {
         textUserAlreadyRegistered.style.display = "none";
     
         if (registerPasswordInput.value.length == 0) {
+
             textPasswordNotLongEnough.style.display = "none";
+
         } else if (registerPasswordInput.value.length < 8) {
+
             textPasswordNotLongEnough.style.display = "block";
+
         } else {
+
             if (registerPasswordConfirmInput.value.length > 0 && registerPasswordInput.value !== registerPasswordConfirmInput.value) {
                 textPasswordsDontMatch.style.display = "block";
             }
+
         }
+
     }
-        
 
     document.getElementById("registerWindow").style.display = "flex";
 
@@ -122,7 +130,7 @@ function login() {
         return;
     }
 
-    // Se inicia sesión
+    // Quita mensajes de error y se inicia sesión
 
     textUserNotFound.style.display = "none";
     textIncorrectPassword.style.display = "none";
@@ -182,7 +190,10 @@ function register() {
         return;
     }
 
-    // Crea el usuario y se inicia sesión
+    // Quita mensajes de error, crea el usuario y se inicia sesión
+
+    textPasswordsDontMatch.style.display = "none";
+    textUserAlreadyRegistered.style.display = "none";
 
     users[username] = password;
     setUsers(users);
@@ -209,7 +220,7 @@ function disposeWindow(event) {
         registerWindow.style.display = "none";
     }
 
-    // Se se presiona "Esc"
+    // Si se presiona "Esc"
 
     if (event.key === "Escape") {
 

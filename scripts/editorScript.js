@@ -3,7 +3,9 @@
 function redirect() {
 
     if(getCurrentUser() === null){
+
         window.location.href = "../index.html";
+        
     }
     
 }

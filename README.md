@@ -51,6 +51,8 @@ Para obtener el favicon a usar en la página, se ha optado por generarlo en un e
 
 El único sonido a usar en toda la página (`check.mp3`) se ha obtenido de la web [pixabay.com](pixabay.com), la cual provee distintos sonidos de uso público.
 
+Todos los recursos usados se pueden encontrar en la [Carpeta de Recursos del Repositorio de GitHub DIW_hernandez_robles_alonso](https://github.com/AloncraftMC/DIW_WEB_hernandez_robles_alonso/tree/main/media).
+
 ### 2. Resolución de Imágenes
 
 Las imágenes en formato SVG parten todas de una resolución base de 24x24 píxeles. 

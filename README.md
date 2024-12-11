@@ -43,13 +43,13 @@
 
 Para la obtención de los recursos a usar en el desarrollo de la página web “Goal Tracker”, se ha optado por usar unos métodos u otros en función del formato y la finalidad de los medios. 
 
-Para las imágenes en formato SVG, se han obtenido 13 pictogramas simbólicos sacados de la web de Google Fonts ([https://fonts.google.com/icons](https://fonts.google.com/icons)). Dado que las imágenes en formato SVG son vectoriales, carecen de la posibilidad de pérdida de calidad. Todos ellos son de uso público. 
+Para las imágenes en formato SVG, se han obtenido 13 pictogramas simbólicos sacados de la web de Google Fonts ([fonts.google.com/icons](https://fonts.google.com/icons)). Dado que las imágenes en formato SVG son vectoriales, carecen de la posibilidad de pérdida de calidad. Todos ellos son de uso público. 
 
-El resto de imágenes, las cuales son los fondos para las 3 páginas (Página de Aterrizaje, Contacto y Tutoriales), se han obtenido en los formatos PNG, JPG, AVIF y WEBP mediante conversores de formato online. Las imágenes originales se han obtenido de la web de generación de imágenes por inteligencia artificial alojada en [deepai.org](deepai.org). Al ser imágenes únicas y nuevas, aún no poseen derechos de autor. 
+El resto de imágenes, las cuales son los fondos para las 3 páginas (Página de Aterrizaje, Contacto y Tutoriales), se han obtenido en los formatos PNG, JPG, AVIF y WEBP mediante conversores de formato online. Las imágenes originales se han obtenido de la web de generación de imágenes por inteligencia artificial alojada en [deepai.org](https://deepai.org). Al ser imágenes únicas y nuevas, aún no poseen derechos de autor. 
 
 Para obtener el *favicon* a usar en la página, se ha optado por generarlo en un editor de *favicons* online obteniendo el resultado en distintas resoluciones cuadradas (Relación de aspecto 1:1). 
 
-El único sonido a usar en toda la página (`check.mp3`) se ha obtenido de la web [pixabay.com](pixabay.com), la cual provee distintos sonidos de uso público.
+El único sonido a usar en toda la página (`check.mp3`) se ha obtenido de la web [pixabay.com](https://pixabay.com), la cual provee distintos sonidos de uso público.
 
 Todos los recursos usados se pueden encontrar en la [Carpeta de Recursos del Repositorio de GitHub DIW_hernandez_robles_alonso](https://github.com/AloncraftMC/DIW_WEB_hernandez_robles_alonso/tree/main/media).
 

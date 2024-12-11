@@ -153,7 +153,6 @@ Se ha seguido la estructura de directorios **típica** para el desarrollo de la 
         - `landingPageBackground.png`
         - `contactoBackground.png`
         - `tutorialesBackground.png`
-    - _videos_
 
 ### Requisitos de Documentación
 

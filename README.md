@@ -1,5 +1,10 @@
 # Goal Tracker
 
+## Índice de Contenidos
+
+- [Tarea 9 - Preparando Recursos](#tarea-9---preparando-recursos)
+- [Antigua Tarea 9 - Página de Inicio](#antigua-tarea-9---página-de-inicio)
+
 ---
 
 ## Tarea 9 - Preparando Recursos
@@ -26,6 +31,11 @@
 > - Los recursos deben descargarse o generarse en la máxima resolución (imágenes y vídeo) y calidad.
 > - Los recursos deben convertirse a los distintos formatos.
 > - Los recursos deben estar ordenador de mas a menos moderno
+
+1. [Obtención de Recursos](#obtención-de-recursos)
+2. [Resolución de Imágenes](#resolución-de-imágenes)
+3. [Jerarquía de Calidad](#jerarquía-de-calidad)
+4. [Compatibilidad de Formatos entre Navegadores](#compatibilidad-de-formatos-entre-navegadores)
 
 ### 1. Obtención de Recursos
 
@@ -67,31 +77,31 @@ A continuación, se muestra un listado de tablas con la compatibilidad entre los
 
 **AVIF**:
 
-![AVIF](docmedia/images/AVIF.png)
+![AVIF](https://raw.githubusercontent.com/AloncraftMC/DIW_WEB_hernandez_robles_alonso/refs/heads/main/docmedia/images/AVIF.png)
 
 **WebP**:
 
-![WebP](docmedia/images/WebP.png)
+![WebP](https://raw.githubusercontent.com/AloncraftMC/DIW_WEB_hernandez_robles_alonso/refs/heads/main/docmedia/images/WebP.png)
 
 **PNG**:
 
-![PNG](docmedia/images/PNG.png)
+![PNG](https://raw.githubusercontent.com/AloncraftMC/DIW_WEB_hernandez_robles_alonso/refs/heads/main/docmedia/images/PNG.png)
 
 **FLAC**:
 
-![FLAC](docmedia/images/FLAC.png)
+![FLAC](https://raw.githubusercontent.com/AloncraftMC/DIW_WEB_hernandez_robles_alonso/refs/heads/main/docmedia/images/FLAC.png)
 
 **WebM**:
 
-![WebM](docmedia/images/WebM.png)
+![WebM](https://raw.githubusercontent.com/AloncraftMC/DIW_WEB_hernandez_robles_alonso/refs/heads/main/docmedia/images/WebM.png)
 
 **Ogg**:
 
-![Ogg](docmedia/images/Ogg.png)
+![Ogg](https://raw.githubusercontent.com/AloncraftMC/DIW_WEB_hernandez_robles_alonso/refs/heads/main/docmedia/images/Ogg.png)
 
 **MP3**:
 
-![MP3](docmedia/images/MP3.png)
+![MP3](https://raw.githubusercontent.com/AloncraftMC/DIW_WEB_hernandez_robles_alonso/refs/heads/main/docmedia/images/MP3.png)
 
 ---
 

@@ -32,10 +32,10 @@
 > - Los recursos deben convertirse a los distintos formatos.
 > - Los recursos deben estar ordenador de mas a menos moderno
 
-1. [Obtención de Recursos](#obtención-de-recursos)
-2. [Resolución de Imágenes](#resolución-de-imágenes)
-3. [Jerarquía de Calidad](#jerarquía-de-calidad)
-4. [Compatibilidad de Formatos entre Navegadores](#compatibilidad-de-formatos-entre-navegadores)
+1. [Obtención de Recursos](#1-obtención-de-recursos)
+2. [Resolución de Imágenes](#2-resolución-de-imágenes)
+3. [Jerarquía de Calidad](#3-jerarquía-de-calidad)
+4. [Compatibilidad de Formatos entre Navegadores](#4-compatibilidad-de-formatos-entre-navegadores)
 
 ### 1. Obtención de Recursos
 

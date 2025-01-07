@@ -386,31 +386,31 @@ A continuación, se muestra un listado de tablas con la compatibilidad entre los
 
 **AVIF**:
 
-![AVIF](https://raw.githubusercontent.com/AloncraftMC/DIW_WEB_hernandez_robles_alonso/refs/heads/main/docmedia/images/AVIF.png)
+![AVIF](https://raw.githubusercontent.com/AloncraftMC/DIW_WEB_hernandez_robles_alonso/refs/heads/main/docmedia/images/Tarea%209/AVIF.png)
 
 **WebP**:
 
-![WebP](https://raw.githubusercontent.com/AloncraftMC/DIW_WEB_hernandez_robles_alonso/refs/heads/main/docmedia/images/WebP.png)
+![WebP](https://raw.githubusercontent.com/AloncraftMC/DIW_WEB_hernandez_robles_alonso/refs/heads/main/docmedia/images/Tarea%209/WebP.png)
 
 **PNG**:
 
-![PNG](https://raw.githubusercontent.com/AloncraftMC/DIW_WEB_hernandez_robles_alonso/refs/heads/main/docmedia/images/PNG.png)
+![PNG](https://raw.githubusercontent.com/AloncraftMC/DIW_WEB_hernandez_robles_alonso/refs/heads/main/docmedia/images/Tarea%209/PNG.png)
 
 **FLAC**:
 
-![FLAC](https://raw.githubusercontent.com/AloncraftMC/DIW_WEB_hernandez_robles_alonso/refs/heads/main/docmedia/images/FLAC.png)
+![FLAC](https://raw.githubusercontent.com/AloncraftMC/DIW_WEB_hernandez_robles_alonso/refs/heads/main/docmedia/images/Tarea%209/FLAC.png)
 
 **WebM**:
 
-![WebM](https://raw.githubusercontent.com/AloncraftMC/DIW_WEB_hernandez_robles_alonso/refs/heads/main/docmedia/images/WebM.png)
+![WebM](https://raw.githubusercontent.com/AloncraftMC/DIW_WEB_hernandez_robles_alonso/refs/heads/main/docmedia/images/Tarea%209/WebM.png)
 
 **Ogg**:
 
-![Ogg](https://raw.githubusercontent.com/AloncraftMC/DIW_WEB_hernandez_robles_alonso/refs/heads/main/docmedia/images/Ogg.png)
+![Ogg](https://raw.githubusercontent.com/AloncraftMC/DIW_WEB_hernandez_robles_alonso/refs/heads/main/docmedia/images/Tarea%209/OGG.png)
 
 **MP3**:
 
-![MP3](https://raw.githubusercontent.com/AloncraftMC/DIW_WEB_hernandez_robles_alonso/refs/heads/main/docmedia/images/MP3.png)
+![MP3](https://raw.githubusercontent.com/AloncraftMC/DIW_WEB_hernandez_robles_alonso/refs/heads/main/docmedia/images/Tarea%209/MP3.png)
 
 ---
 

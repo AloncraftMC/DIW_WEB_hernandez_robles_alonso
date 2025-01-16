@@ -1,0 +1,392 @@
+@font-face {
+  font-family: "Rubik Medium";
+  src: url("../../media/fonts/Rubik-Medium.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Rubik Regular";
+  src: url("../../media/fonts/Rubik-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Rubik Light";
+  src: url("../../media/fonts/Rubik-Light.ttf") format("truetype");
+  font-display: swap;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik Regular", sans-serif;
+  background-color: #8FE1FF;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+@media (min-width: 480px) {
+  @supports (background-image: image-set(url("../../media/images/avif/aterrizajeFondo480.avif") 1x)) {
+    body {
+      background-image: image-set(url("../../media/images/avif/aterrizajeFondo480.avif") type("image/avif") 1x, url("../../media/images/webp/aterrizajeFondo480.webp") type("image/webp") 1x, url("../../media/images/png/aterrizajeFondo480.png") type("image/png") 1x);
+    }
+  }
+}
+@media (min-width: 480px) {
+  @supports (background-image: image-set(url("../../media/images/webp/aterrizajeFondo480.webp") 1x)) {
+    body {
+      background-image: image-set(url("../../media/images/avif/aterrizajeFondo480.avif") type("image/avif") 1x, url("../../media/images/webp/aterrizajeFondo480.webp") type("image/webp") 1x, url("../../media/images/png/aterrizajeFondo480.png") type("image/png") 1x);
+    }
+  }
+}
+@media (min-width: 480px) {
+  @supports (background-image: image-set(url("../../media/images/png/aterrizajeFondo480.png") 1x)) {
+    body {
+      background-image: image-set(url("../../media/images/avif/aterrizajeFondo480.avif") type("image/avif") 1x, url("../../media/images/webp/aterrizajeFondo480.webp") type("image/webp") 1x, url("../../media/images/png/aterrizajeFondo480.png") type("image/png") 1x);
+    }
+  }
+}
+@media (min-width: 768px) {
+  @supports (background-image: image-set(url("../../media/images/avif/aterrizajeFondo768.avif") 1x)) {
+    body {
+      background-image: image-set(url("../../media/images/avif/aterrizajeFondo768.avif") type("image/avif") 1x, url("../../media/images/webp/aterrizajeFondo768.webp") type("image/webp") 1x, url("../../media/images/png/aterrizajeFondo768.png") type("image/png") 1x);
+    }
+  }
+}
+@media (min-width: 768px) {
+  @supports (background-image: image-set(url("../../media/images/webp/aterrizajeFondo768.webp") 1x)) {
+    body {
+      background-image: image-set(url("../../media/images/avif/aterrizajeFondo768.avif") type("image/avif") 1x, url("../../media/images/webp/aterrizajeFondo768.webp") type("image/webp") 1x, url("../../media/images/png/aterrizajeFondo768.png") type("image/png") 1x);
+    }
+  }
+}
+@media (min-width: 768px) {
+  @supports (background-image: image-set(url("../../media/images/png/aterrizajeFondo768.png") 1x)) {
+    body {
+      background-image: image-set(url("../../media/images/avif/aterrizajeFondo768.avif") type("image/avif") 1x, url("../../media/images/webp/aterrizajeFondo768.webp") type("image/webp") 1x, url("../../media/images/png/aterrizajeFondo768.png") type("image/png") 1x);
+    }
+  }
+}
+@media (min-width: 1200px) {
+  @supports (background-image: image-set(url("../../media/images/avif/aterrizajeFondo1200.avif") 1x)) {
+    body {
+      background-image: image-set(url("../../media/images/avif/aterrizajeFondo1200.avif") type("image/avif") 1x, url("../../media/images/webp/aterrizajeFondo1200.webp") type("image/webp") 1x, url("../../media/images/png/aterrizajeFondo1200.png") type("image/png") 1x);
+    }
+  }
+}
+@media (min-width: 1200px) {
+  @supports (background-image: image-set(url("../../media/images/webp/aterrizajeFondo1200.webp") 1x)) {
+    body {
+      background-image: image-set(url("../../media/images/avif/aterrizajeFondo1200.avif") type("image/avif") 1x, url("../../media/images/webp/aterrizajeFondo1200.webp") type("image/webp") 1x, url("../../media/images/png/aterrizajeFondo1200.png") type("image/png") 1x);
+    }
+  }
+}
+@media (min-width: 1200px) {
+  @supports (background-image: image-set(url("../../media/images/png/aterrizajeFondo1200.png") 1x)) {
+    body {
+      background-image: image-set(url("../../media/images/avif/aterrizajeFondo1200.avif") type("image/avif") 1x, url("../../media/images/webp/aterrizajeFondo1200.webp") type("image/webp") 1x, url("../../media/images/png/aterrizajeFondo1200.png") type("image/png") 1x);
+    }
+  }
+}
+@media (min-width: 1920px) {
+  @supports (background-image: image-set(url("../../media/images/avif/aterrizajeFondo1920.avif") 1x)) {
+    body {
+      background-image: image-set(url("../../media/images/avif/aterrizajeFondo1920.avif") type("image/avif") 1x, url("../../media/images/webp/aterrizajeFondo1920.webp") type("image/webp") 1x, url("../../media/images/png/aterrizajeFondo1920.png") type("image/png") 1x);
+    }
+  }
+}
+@media (min-width: 1920px) {
+  @supports (background-image: image-set(url("../../media/images/webp/aterrizajeFondo1920.webp") 1x)) {
+    body {
+      background-image: image-set(url("../../media/images/avif/aterrizajeFondo1920.avif") type("image/avif") 1x, url("../../media/images/webp/aterrizajeFondo1920.webp") type("image/webp") 1x, url("../../media/images/png/aterrizajeFondo1920.png") type("image/png") 1x);
+    }
+  }
+}
+@media (min-width: 1920px) {
+  @supports (background-image: image-set(url("../../media/images/png/aterrizajeFondo1920.png") 1x)) {
+    body {
+      background-image: image-set(url("../../media/images/avif/aterrizajeFondo1920.avif") type("image/avif") 1x, url("../../media/images/webp/aterrizajeFondo1920.webp") type("image/webp") 1x, url("../../media/images/png/aterrizajeFondo1920.png") type("image/png") 1x);
+    }
+  }
+}
+@media (min-width: 2560px) {
+  @supports (background-image: image-set(url("../../media/images/avif/aterrizajeFondo2560.avif") 1x)) {
+    body {
+      background-image: image-set(url("../../media/images/avif/aterrizajeFondo2560.avif") type("image/avif") 1x, url("../../media/images/webp/aterrizajeFondo2560.webp") type("image/webp") 1x, url("../../media/images/png/aterrizajeFondo2560.png") type("image/png") 1x);
+    }
+  }
+}
+@media (min-width: 2560px) {
+  @supports (background-image: image-set(url("../../media/images/webp/aterrizajeFondo2560.webp") 1x)) {
+    body {
+      background-image: image-set(url("../../media/images/avif/aterrizajeFondo2560.avif") type("image/avif") 1x, url("../../media/images/webp/aterrizajeFondo2560.webp") type("image/webp") 1x, url("../../media/images/png/aterrizajeFondo2560.png") type("image/png") 1x);
+    }
+  }
+}
+@media (min-width: 2560px) {
+  @supports (background-image: image-set(url("../../media/images/png/aterrizajeFondo2560.png") 1x)) {
+    body {
+      background-image: image-set(url("../../media/images/avif/aterrizajeFondo2560.avif") type("image/avif") 1x, url("../../media/images/webp/aterrizajeFondo2560.webp") type("image/webp") 1x, url("../../media/images/png/aterrizajeFondo2560.png") type("image/png") 1x);
+    }
+  }
+}
+@media (min-width: 3200px) {
+  @supports (background-image: image-set(url("../../media/images/avif/aterrizajeFondo3200.avif") 1x)) {
+    body {
+      background-image: image-set(url("../../media/images/avif/aterrizajeFondo3200.avif") type("image/avif") 1x, url("../../media/images/webp/aterrizajeFondo3200.webp") type("image/webp") 1x, url("../../media/images/png/aterrizajeFondo3200.png") type("image/png") 1x);
+    }
+  }
+}
+@media (min-width: 3200px) {
+  @supports (background-image: image-set(url("../../media/images/webp/aterrizajeFondo3200.webp") 1x)) {
+    body {
+      background-image: image-set(url("../../media/images/avif/aterrizajeFondo3200.avif") type("image/avif") 1x, url("../../media/images/webp/aterrizajeFondo3200.webp") type("image/webp") 1x, url("../../media/images/png/aterrizajeFondo3200.png") type("image/png") 1x);
+    }
+  }
+}
+@media (min-width: 3200px) {
+  @supports (background-image: image-set(url("../../media/images/png/aterrizajeFondo3200.png") 1x)) {
+    body {
+      background-image: image-set(url("../../media/images/avif/aterrizajeFondo3200.avif") type("image/avif") 1x, url("../../media/images/webp/aterrizajeFondo3200.webp") type("image/webp") 1x, url("../../media/images/png/aterrizajeFondo3200.png") type("image/png") 1x);
+    }
+  }
+}
+
+main {
+  text-align: center;
+}
+
+.titulo-goal-tracker {
+  margin: 0;
+  margin-top: 7vh;
+  color: white;
+  font-family: "Rubik Medium", sans-serif;
+  font-size: 7.1vw;
+  text-shadow: 0px 0.8vw 0.8vw rgba(0, 0, 0, 0.25);
+}
+
+.subtitulo-crea-gestiona {
+  margin: 0;
+  margin-top: 3vw;
+  color: white;
+  font-family: "Rubik Light", sans-serif;
+  font-size: 2.8vw;
+  text-shadow: 0px 0.2vw 0.1vw rgba(0, 0, 0, 0.25);
+}
+
+.botones {
+  margin: 0;
+  margin-top: 5vw;
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
+  padding: 2vw;
+  background-color: rgba(145, 226, 255, 0.5019607843);
+  border-radius: 4vh;
+}
+
+.boton,
+.contenido-ventana .boton {
+  font-family: "Rubik Light", sans-serif;
+  font-size: 2vw;
+  padding-top: 1.25vw;
+  padding-bottom: 1.25vw;
+  width: 16vw;
+  text-align: center;
+  border: 0.5vh solid black;
+  border-radius: 2vh;
+  cursor: pointer;
+  transition: filter 0.2s ease-in-out;
+  outline: none;
+}
+
+input[type=submit].boton {
+  border: 0.5vh solid black;
+  border-radius: 2vh;
+}
+
+.boton:hover {
+  filter: brightness(0.75);
+}
+
+.boton-blanco {
+  background-color: white;
+  color: black;
+  box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.5);
+  margin-right: 0.4vw;
+}
+
+.boton-azul {
+  background-color: #064156;
+  color: white;
+  box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.5);
+  margin-left: 0.4vw;
+  min-width: 150px;
+}
+
+.ventana-login,
+.ventana-registro {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.contenido-ventana {
+  background-color: white;
+  color: black;
+  padding: 3vw;
+  width: 30vw;
+  border-radius: 4vh;
+}
+
+.titulo-ventana {
+  margin-top: 0;
+  text-align: center;
+  font-family: "Rubik Medium", sans-serif;
+  font-size: 2vw;
+}
+
+.contenido-ventana label {
+  font-size: 1.5vw;
+  margin-top: 2vw;
+}
+
+.contenido-ventana input {
+  width: 85%;
+  padding: 1vw;
+  margin-top: 0.5vw;
+  margin-bottom: 1.5vw;
+  margin-left: 0;
+  margin-right: 0;
+  border: 0.2vw solid #ccc;
+  border-radius: 1vw;
+  font-family: "Rubik Light", sans-serif;
+  font-size: 1.5vw;
+}
+
+.contenido-ventana .boton {
+  background-color: #8FE1FF;
+  color: black;
+  padding: 1.2vw;
+  font-size: 2.2vw;
+  margin-top: 2vw;
+  text-align: center;
+  width: auto;
+}
+
+.botones-ventana {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#passwordsDontMatch,
+#userNotFound,
+#userAlreadyRegistered,
+#incorrectPassword,
+#passwordNotLongEnough {
+  color: red;
+  margin-top: 0;
+  text-align: left;
+  font-family: "Rubik Light", sans-serif;
+  font-size: 1.2vw;
+  display: none;
+}
+
+@media (max-width: 1100px) and (min-width: 750px) {
+  .titulo-goal-tracker {
+    font-size: 9.6vw;
+  }
+  .subtitulo-crea-gestiona {
+    font-size: 4.2vw;
+    margin-top: 4.8vw;
+  }
+  .botones {
+    gap: 3.6vw;
+    padding: 3.6vw;
+    border-radius: 3.6vw;
+  }
+  .boton {
+    font-size: 3vw;
+    width: 21.6vw;
+    padding: 1.8vw;
+  }
+  .contenido-ventana {
+    width: 40vw;
+    max-width: 720px;
+    padding: 3.6vw;
+  }
+  .titulo-ventana {
+    font-size: 3.6vw;
+  }
+  .contenido-ventana label,
+  .contenido-ventana input {
+    font-size: 2.4vw;
+  }
+  .contenido-ventana .boton {
+    padding: 1.7vw;
+    font-size: 3.4vw;
+    margin-top: 3vw;
+  }
+  #passwordsDontMatch,
+  #userNotFound,
+  #userAlreadyRegistered,
+  #incorrectPassword,
+  #passwordNotLongEnough {
+    font-size: 1.8vw;
+  }
+}
+@media (max-width: 750px) {
+  body {
+    padding: 5vh 2vw;
+  }
+  .titulo-goal-tracker {
+    font-size: 15vw;
+    margin-top: 5vh;
+  }
+  .subtitulo-crea-gestiona {
+    font-size: 6vw;
+    margin-top: 6vw;
+  }
+  .botones {
+    flex-direction: column;
+    gap: 3vw;
+    padding: 4vh;
+    border-radius: 4vw;
+  }
+  .boton {
+    font-size: 4.5vw;
+    width: 100%;
+    padding: 2vh;
+    min-width: 150px;
+  }
+  .contenido-ventana {
+    width: 300px;
+    padding: 4vw;
+  }
+  .titulo-ventana {
+    font-size: 5vw;
+  }
+  .contenido-ventana label,
+  .contenido-ventana input {
+    font-size: 3.5vw;
+  }
+  .contenido-ventana .boton {
+    padding: 3vw;
+    font-size: 4vw;
+    margin-top: 5vw;
+  }
+  #passwordsDontMatch,
+  #userNotFound,
+  #userAlreadyRegistered,
+  #incorrectPassword,
+  #passwordNotLongEnough {
+    font-size: 3vw;
+  }
+}
+
+/*# sourceMappingURL=aterrizajeStyle.css.map */

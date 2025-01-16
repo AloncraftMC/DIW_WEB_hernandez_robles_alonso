@@ -4,7 +4,7 @@ function redirect() {
 
     if(getCurrentUser() != null){
         
-        //  window.location.href = "pages/editor.html"; // (=> Después de Tarea 9)
+        //  window.location.href = "pages/editor.html"; // (=> Después de Tarea 11)
     
     }
     

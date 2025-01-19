@@ -1,131 +1,250 @@
-// main.scss
-@use 'variables';
-@use 'mixins';
+// Importaciones de módulos
+@import 'variables';  // Para variables como las fuentes y colores
+@import 'mixins';     // Para mixins como media queries y otros reutilizables
+@import 'functions';  // Para funciones necesarias (por ejemplo, de escalado)
 
-@include mixins.font-face('Rubik Medium', variables.$rubik-medium-font);
-@include mixins.font-face('Rubik Regular', variables.$rubik-regular-font);
-@include mixins.font-face('Rubik Light', variables.$rubik-light-font);
-
+/* Cuerpo de la página */
 body {
-  margin: 0;
-  padding: 0;
-  font-family: variables.$rubik-regular-font;
-  background: url(variables.$background-image) no-repeat center center fixed;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  height: 100vh;
+    background-image: 
+        url('../../media/images/avif/aterrizajeFondo3200.avif'),
+        url('../../media/images/avif/aterrizajeFondo3200.webp'),
+        url('../../media/images/avif/aterrizajeFondo3200.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    font-family: $rubikRegular;
+    display: flex;
+    justify-content: center;
 }
 
 main {
-  text-align: center;
+    text-align: center;
 }
 
+/* Título "Goal Tracker" */
 .titulo-goal-tracker {
-  margin: 0;
-  margin-top: 7vh;
-  color: white;
-  font-family: variables.$rubik-medium;
-  font-size: 7.1vw;
-  text-shadow: 0px 0.8vw 0.8vw rgba(0, 0, 0, 0.25);
-
-  @include mixins.breakpoint(movil) {
-    font-size: 15vw;
-    margin-top: 5vh;
-  }
-
-  @include mixins.breakpoint(tableta) {
-    font-size: 9.6vw;
-  }
-
-  @include mixins.breakpoint(pequeno) {
-    font-size: 6.4vw;
-  }
-
-  @include mixins.breakpoint(estandar) {
-    font-size: 5.1vw;
-  }
-
-  @include mixins.breakpoint(grande) {
-    font-size: 4vw;
-  }
+    margin: 0;
+    margin-top: 7vh;
+    color: white;
+    font-family: $rubikMedium;
+    font-size: calc(8vh + 3vw);
+    text-shadow: 0px 0.8vw 0.8vw rgba(0, 0, 0, 0.25);
 }
 
+/* Subtítulo "Crea y gestiona tus propios objetivos" */
 .subtitulo-crea-gestiona {
-  margin: 0;
-  margin-top: 3vw;
-  color: white;
-  font-family: variables.$rubik-light;
-  font-size: 2.8vw;
-  text-shadow: 0px 0.2vw 0.1vw rgba(0, 0, 0, 0.25);
-
-  @include mixins.breakpoint(movil) {
-    font-size: 6vw;
-    margin-top: 6vw;
-  }
-
-  @include mixins.breakpoint(tableta) {
-    font-size: 4.2vw;
-    margin-top: 4.8vw;
-  }
-
-  @include mixins.breakpoint(pequeno) {
-    font-size: 3.5vw;
-  }
-
-  @include mixins.breakpoint(estandar) {
-    font-size: 2.8vw;
-  }
-
-  @include mixins.breakpoint(grande) {
-    font-size: 2.4vw;
-  }
+    margin: 0;
+    margin-top: calc(7vh - 1vw);
+    color: white;
+    font-family: $rubikLight;
+    font-size: calc(2.8vh + 1.4vw);
+    text-shadow: 0px 0.2vw 0.1vw rgba(0, 0, 0, 0.25);
 }
 
+/* Contenedor de botones "Iniciar Sesión" y "Registrarse" */
 .botones {
-  margin: 0;
-  margin-top: 5vw;
-  display: flex;
-  justify-content: center;
-  gap: 2vw;
-  padding: 2vw;
-  background-color: variables.$azul-transparente;
-  border-radius: 4vh;
 
-  @include mixins.breakpoint(movil) {
-    flex-direction: column;
-    gap: 3vw;
-    padding: 4vh;
-  }
+    margin: 0;
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    padding: 40px;
+    background-color: $azulTransparente;
+    border-radius: calc(4vh);
 
-  @include mixins.breakpoint(tableta) {
-    gap: 3.6vw;
-    padding: 3.6vw;
-  }
+    /* Botón en sí */
+    .boton {
+        font-size: calc(0.5vw + 3vh);
+    }
+
+    /* Regla para que los botones se apilen en pantallas pequeñas */
+    @include respond-to('medium-screen') {
+        flex-direction: column;
+        align-items: center;
+        gap: 2vh;
+    }
+
 }
 
+/* Botón genérico */
 .boton {
-  font-family: variables.$rubik-light;
-  font-size: 2vw;
-  padding-top: 1.25vw;
-  padding-bottom: 1.25vw;
-  width: 16vw;
-  text-align: center;
-  border: 0.5vh solid black;
-  border-radius: 2vh;
-  cursor: pointer;
-  transition: filter 0.2s ease-in-out;
-  outline: none;
+    font-family: $rubikLight;
+    font-size: 2vw;
+    padding-top: 2.25vh;
+    padding-bottom: 2.25vh;
+    width: 30vh;
+    text-align: center;
+    border: 0.5vh solid black;
+    border-radius: 2vh;
+    cursor: pointer;
+    transition: filter 0.2s ease-in-out;
+    outline: none;
+    box-shadow: $buttonShadow;
+    &:hover{
+        filter: brightness(0.75);
+    }
+}
 
-  @include mixins.breakpoint(movil) {
-    font-size: 4.5vw;
-    width: 100%;
+.boton-blanco {
+    background-color: white;
+    color: black;
+    margin-right: 0.4vw;
+}
+
+.boton-azul {
+    background-color: $azulOscuro;
+    color: white;
+    margin-left: 0.4vw;
+}
+
+/* Ventana que ocupa lo que es el widget + el espacio negativo negro semi-transparente de alrededor, que se extiende hasta el límite de la pantalla */
+.ventana-login,
+.ventana-registro {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+/* Lo que es el widget de la ventana en sí */
+.contenido-ventana {
+    background-color: white;
+    text-align: left;
+    color: black;
+    padding: 6vh;
+    width: 60vh;
+    border-radius: 4vh;
+}
+
+/* El título de la ventana (Ej. "Iniciar Sesión" / "Registrarse") */
+.titulo-ventana {
+    margin-top: 0;
+    font-family: $rubikMedium;
+    font-size: 4vh;
+    text-align: center;
+}
+
+/* Título de un campo */
+.contenido-ventana label {
+    font-size: 3vh;
+    margin-top: 4vh;
+}
+
+/* Input de formulario en ventana */
+.contenido-ventana input {
+    width: 85%;
     padding: 2vh;
-  }
+    margin-top: 1vh;
+    margin-bottom: 3vh;
+    margin-left: 0;
+    margin-right: 0;
+    border: 0.4vh solid #ccc;
+    border-radius: 2vh;
+    font-family: $rubikLight;
+    font-size: 3vh;
+}
 
-  @include mixins.breakpoint(tableta) {
-    font-size: 3vw;
-    width: 21.6vw;
-    padding: 1.8vw;
-  }
+/* Botón en ventana */
+.contenido-ventana .boton {
+    background-color: $azulClaro;
+    color: black;
+    padding: 2.4vh;
+    font-size: 4.4vh;
+    margin-top: 4vh;
+    text-align: center;
+    width: auto;
+    border: 0.5vh solid black;
+}
+
+/* Contenedor de los botones en la ventana */
+.botones-ventana {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Textos de Error manipulados por JavaScript */
+#passwordsDontMatch,
+#userNotFound,
+#userAlreadyRegistered,
+#incorrectPassword,
+#passwordNotLongEnough {
+    color: red;
+    margin-top: 0;
+    text-align: left;
+    font-family: $rubikLight;
+    font-size: 2.4vh;
+    display: none;
+}
+
+/* Media queries para adaptar el formato (sobre todo de imagen) a las resoluciones requeridas */
+@include respond-to('pantallaGrande') {
+    body {
+        background-image: 
+        url('../../media/images/avif/aterrizajeFondo2560.avif'),
+        url('../../media/images/avif/aterrizajeFondo2560.webp'),
+        url('../../media/images/avif/aterrizajeFondo2560.jpg');
+    }
+}
+
+@include respond-to('pantallaEstandar') {
+    body {
+        background-image: 
+        url('../../media/images/avif/aterrizajeFondo1920.avif'),
+        url('../../media/images/avif/aterrizajeFondo1920.webp'),
+        url('../../media/images/avif/aterrizajeFondo1920.jpg');
+    }
+}
+
+@include respond-to('pantallaPequena') {
+    body {
+        background-image: 
+        url('../../media/images/avif/aterrizajeFondo1200.avif'),
+        url('../../media/images/avif/aterrizajeFondo1200.webp'),
+        url('../../media/images/avif/aterrizajeFondo1200.jpg');
+    }
+    .botones {
+        flex-direction: column;
+        align-items: center;
+        gap: 2vh;
+    }
+    .contenido-ventana {
+        transform: scale(0.9);
+    }
+}
+
+@include respond-to('tableta') {
+    body {
+        background-image: 
+        url('../../media/images/avif/aterrizajeFondo768.avif'),
+        url('../../media/images/avif/aterrizajeFondo768.webp'),
+        url('../../media/images/avif/aterrizajeFondo768.jpg');
+    }
+    .contenido-ventana {
+        transform: scale(0.8);
+    }
+}
+
+@include respond-to('movil') {
+    body {
+        background-image: 
+        url('../../media/images/avif/aterrizajeFondo480.avif'),
+        url('../../media/images/avif/aterrizajeFondo480.webp'),
+        url('../../media/images/avif/aterrizajeFondo480.jpg');
+    }
+    .contenido-ventana {
+        transform: scale(0.7);
+    }
 }

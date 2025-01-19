@@ -1,0 +1,9 @@
+// Función para calcular tamaños dinámicos
+@function tamanoDinamico($base, $factor) {
+    @return $base * $factor;
+}
+
+// Función para generar un color con transparencia
+@function colorTransparente($color, $transparencia) {
+    @return rgba(red($color), green($color), blue($color), $transparencia);
+}

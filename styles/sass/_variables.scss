@@ -1,19 +1,23 @@
-$breakpoint-movil: 480px;
-$breakpoint-tableta: 768px;
-$breakpoint-pequeno: 1200px;
-$breakpoint-estandar: 1920px;
-$breakpoint-grande: 2560px;
+// Variables de colores
+$azulOscuro: #064156;
+$azulTransparente: rgba(145, 226, 255, 0.5);
+$azulClaro: #8FE1FF;
 
-$rubik-light: 'Rubik Light', sans-serif;
-$rubik-regular: 'Rubik Regular', sans-serif;
-$rubik-medium: 'Rubik Medium', sans-serif;
+// Variables de fuentes
+$rubikLight: 'Rubik Light', sans-serif;
+$rubikRegular: 'Rubik Regular', sans-serif;
+$rubikMedium: 'Rubik Medium', sans-serif;
 
-$rubik-medium-font: '../../media/fonts/Rubik-Medium.ttf';
-$rubik-regular-font: '../../media/fonts/Rubik-Regular.ttf';
-$rubik-light-font: '../../media/fonts/Rubik-Light.ttf';
+// Variables de tamaños para los puntos de ruptura
+$puntosRuptura: (
+    "movil": 480px,
+    "tableta": 768px,
+    "pantallaPequena": 1200px,
+    "pantallaEstandar": 1920px,
+    "pantallaGrande": 2560px
+);
 
-$azul-oscuro: #064156;
-$azul-transparente: #91E2FF80;
-$azul-claro: #8FE1FF;
-
-$background-image: '../../media/images/avif/aterrizajeFondo.avif';
+// Otras variables
+$borderRadius: 2vh;
+$buttonShadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.5);
+$transitionSpeed: 0.2s;

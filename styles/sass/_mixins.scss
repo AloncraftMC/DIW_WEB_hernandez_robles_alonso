@@ -1,28 +1,36 @@
-// _mixins.scss
-@mixin breakpoint($size) {
-    @if $size == movil {
-        @media (max-width: #{$breakpoint-movil}) {
-            @content;
-        }
+// Mixin para los puntos de ruptura
+@mixin respond-to($tamano) {
+    @if $tamano == 'pantallaGrande' {
+        @media (max-width: 2560px) { @content; }
     }
-    @else if $size == tableta {
-        @media (max-width: #{$breakpoint-tableta}) and (min-width: #{$breakpoint-movil}) {
-            @content;
-        }
+    @else if $tamano == 'pantallaEstandar' {
+        @media (max-width: 1920px) { @content; }
     }
-    @else if $size == pequeno {
-        @media (max-width: #{$breakpoint-pequeno}) and (min-width: #{$breakpoint-tableta}) {
-            @content;
-        }
+    @else if $tamano == 'pantallaPequena' {
+        @media (max-width: 1200px) { @content; }
     }
-    @else if $size == estandar {
-        @media (max-width: #{$breakpoint-estandar}) and (min-width: #{$breakpoint-pequeno}) {
-            @content;
-        }
+    @else if $tamano == 'tableta' {
+        @media (max-width: 768px) { @content; }
     }
-    @else if $size == grande {
-        @media (max-width: #{$breakpoint-grande}) and (min-width: #{$breakpoint-estandar}) {
-            @content;
-        }
+    @else if $tamano == 'movil' {
+        @media (max-width: 480px) { @content; }
     }
-}  
+}
+
+// Mixin para botones
+@mixin button-style($backgroundColor, $textColor) {
+    background-color: $backgroundColor;
+    color: $textColor;
+    border-radius: $borderRadius;
+    box-shadow: $buttonShadow;
+    cursor: pointer;
+    transition: filter $transitionSpeed ease-in-out;
+    &:hover {
+        filter: brightness(0.75);
+    }
+}
+
+// Mixin para textos con sombra
+@mixin text-shadow($color, $x, $y, $blur) {
+    text-shadow: $x $y $blur $color;
+}

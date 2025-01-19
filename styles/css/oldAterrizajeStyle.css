@@ -7,77 +7,90 @@
     --azulClaro: #8FE1FF;
 }
 
+/**
+  * =================================================
+  * REGLAS DEFAULT
+  * =================================================
+  */
+
 @font-face {
-    font-family: 'Rubik Medium';
-    src: url('../../media/fonts/Rubik-Medium.ttf') format('truetype');
+    font-family: "Rubik Medium";
+    src: url("../../media/fonts/Rubik-Medium.ttf") format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: "Rubik Regular";
+    src: url("../../media/fonts/Rubik-Regular.ttf") format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: "Rubik Light";
+    src: url("../../media/fonts/Rubik-Light.ttf") format("truetype");
     font-display: swap;
 }
 
-@font-face {
-    font-family: 'Rubik Regular';
-    src: url('../../media/fonts/Rubik-Regular.ttf') format('truetype');
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Rubik Light';
-    src: url('../../media/fonts/Rubik-Light.ttf') format('truetype');
-    font-display: swap;
-}
-
-/* Versión Base - Ordenadores */
-
-body {
+body{
+    background-image: 
+        url('../../media/images/avif/aterrizajeFondo3200.avif'),
+        url('../../media/images/avif/aterrizajeFondo3200.webp'),
+        url('../../media/images/avif/aterrizajeFondo3200.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     margin: 0;
     padding: 0;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
     font-family: var(--rubikRegular);
-    background: url('../../media/images/avif/aterrizajeFondo.avif') no-repeat center center fixed;
-    background-size: cover;
     display: flex;
     justify-content: center;
-    height: 100vh;
 }
 
-main {
+main{
     text-align: center;
 }
 
-.titulo-goal-tracker {
+.titulo-goal-tracker{
     margin: 0;
     margin-top: 7vh;
     color: white;
     font-family: var(--rubikMedium);
-    font-size: 7.1vw;
+    font-size: calc(8vh + 3vw);
     text-shadow: 0px 0.8vw 0.8vw rgba(0, 0, 0, 0.25);
 }
 
-.subtitulo-crea-gestiona {
+.subtitulo-crea-gestiona{
     margin: 0;
-    margin-top: 3vw;
+    margin-top: calc(7vh - 1vw);
     color: white;
     font-family: var(--rubikLight);
-    font-size: 2.8vw;
+    font-size: calc(2.8vh + 1.4vw);
     text-shadow: 0px 0.2vw 0.1vw rgba(0, 0, 0, 0.25);
 }
 
-.botones {
+.botones{
     margin: 0;
-    margin-top: 5vw;
+    margin-top: 10vh;
     display: flex;
     justify-content: center;
     gap: 2vw;
-    padding: 2vw;
+    padding: 40px;
     background-color: var(--azulTransparente);
-    border-radius: 4vh;
+    border-radius: calc(4vh);
+}
+
+.botones .boton{
+    font-size: calc(0.5vw + 3vh);
 }
 
 .boton,
 .contenido-ventana .boton {
     font-family: var(--rubikLight);
     font-size: 2vw;
-    padding-top: 1.25vw;
-    padding-bottom: 1.25vw;
-    width: 16vw;
+    padding-top: 2.25vh;
+    padding-bottom: 2.25vh;
+    width: 30vh;
     text-align: center;
     border: 0.5vh solid black;
     border-radius: 2vh;
@@ -107,7 +120,6 @@ input[type="submit"].boton {
     color: white;
     box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.5);
     margin-left: 0.4vw;
-    min-width: 150px;
 }
 
 .ventana-login,
@@ -126,43 +138,44 @@ input[type="submit"].boton {
 
 .contenido-ventana {
     background-color: white;
+    text-align: left;
     color: black;
-    padding: 3vw;
-    width: 30vw;
+    padding: 6vh;
+    width: 60vh;
     border-radius: 4vh;
 }
 
 .titulo-ventana {
     margin-top: 0;
-    text-align: center;
     font-family: var(--rubikMedium);
-    font-size: 2vw;
+    font-size: 4vh;
+    text-align: center;
 }
 
 .contenido-ventana label {
-    font-size: 1.5vw;
-    margin-top: 2vw;
+    font-size: 3vh;
+    margin-top: 4vh;
 }
 
 .contenido-ventana input {
     width: 85%;
-    padding: 1vw;
-    margin-top: 0.5vw;
-    margin-bottom: 1.5vw;
+    padding: 2vh;
+    margin-top: 1vh;
+    margin-bottom: 3vh;
     margin-left: 0;
     margin-right: 0;
-    border: 0.2vw solid #ccc;
-    border-radius: 1vw;
+    border: 0.4vh solid #ccc;
+    border-radius: 2vh;
     font-family: var(--rubikLight);
-    font-size: 1.5vw;
+    font-size: 3vh;
 }
 
 .contenido-ventana .boton {
     background-color: var(--azulClaro);
     color: black;
-    padding: 1.2vw;
-    font-size: 2.2vw;
-    margin-top: 2vw;
+    padding: 2.4vh;
+    font-size: 4.4vh;
+    margin-top: 4vh;
     text-align: center;
     width: auto;
 }
@@ -182,124 +195,76 @@ input[type="submit"].boton {
     margin-top: 0;
     text-align: left;
     font-family: var(--rubikLight);
-    font-size: 1.2vw;
+    font-size: 2.4vh;
     display: none;
 }
 
-/* Versión Tabletas */
+/**
+  * =================================================
+  * MEDIA QUERIES
+  * =================================================
+  */
 
-@media (max-width: 1100px) and (min-width: 750px) {
-
-    .titulo-goal-tracker {
-        font-size: 9.6vw;
+/* Pantallas grandes */
+@media (max-width: 2560px) {
+    body{
+        background-image: 
+        url('../../media/images/avif/aterrizajeFondo2560.avif'),
+        url('../../media/images/avif/aterrizajeFondo2560.webp'),
+        url('../../media/images/avif/aterrizajeFondo2560.jpg');
     }
-
-    .subtitulo-crea-gestiona {
-        font-size: 4.2vw;
-        margin-top: 4.8vw;
-    }
-
-    .botones {
-        gap: 3.6vw;
-        padding: 3.6vw;
-        border-radius: 3.6vw;
-    }
-
-    .boton {
-        font-size: 3vw;
-        width: 21.6vw;
-        padding: 1.8vw;
-    }
-
-    .contenido-ventana {
-        width: 40vw;
-        max-width: 720px;
-        padding: 3.6vw;
-    }
-
-    .titulo-ventana {
-        font-size: 3.6vw;
-    }
-
-    .contenido-ventana label,
-    .contenido-ventana input {
-        font-size: 2.4vw;
-    }
-
-    .contenido-ventana .boton {
-        padding: 1.7vw;
-        font-size: 3.4vw;
-        margin-top: 3vw;
-    }
-
-    #passwordsDontMatch,
-    #userNotFound,
-    #userAlreadyRegistered,
-    #incorrectPassword,
-    #passwordNotLongEnough {
-        font-size: 1.8vw;
-    }
-
 }
 
-/* Versión Móviles */
-
-@media (max-width: 750px) {
-
-    body {
-        padding: 5vh 2vw;
+/* Pantallas estándar */
+@media (max-width: 1920px) {
+    body{
+        background-image: 
+        url('../../media/images/avif/aterrizajeFondo1920.avif'),
+        url('../../media/images/avif/aterrizajeFondo1920.webp'),
+        url('../../media/images/avif/aterrizajeFondo1920.jpg');
     }
+}
 
-    .titulo-goal-tracker {
-        font-size: 15vw;
-        margin-top: 5vh;
+/* Pantallas pequeñas */
+@media (max-width: 1200px) {
+    body{
+        background-image: 
+        url('../../media/images/avif/aterrizajeFondo1200.avif'),
+        url('../../media/images/avif/aterrizajeFondo1200.webp'),
+        url('../../media/images/avif/aterrizajeFondo1200.jpg');
     }
-
-    .subtitulo-crea-gestiona {
-        font-size: 6vw;
-        margin-top: 6vw;
-    }
-
     .botones {
         flex-direction: column;
-        gap: 3vw;
-        padding: 4vh;
-        border-radius: 4vw;
+        align-items: center;
+        gap: 2vh;
     }
-
-    .boton {
-        font-size: 4.5vw;
-        width: 100%;
-        padding: 2vh;
-        min-width: 150px;
+    .contenido-ventana{
+        transform: scale(0.9);
     }
+}
 
-    .contenido-ventana {
-        width: 300px;
-        padding: 4vw;
+/* Tabletas */
+@media (max-width: 768px) {
+    body{
+        background-image: 
+        url('../../media/images/avif/aterrizajeFondo768.avif'),
+        url('../../media/images/avif/aterrizajeFondo768.webp'),
+        url('../../media/images/avif/aterrizajeFondo768.jpg');
     }
-
-    .titulo-ventana {
-        font-size: 5vw;
+    .contenido-ventana{
+        transform: scale(0.8);
     }
+}
 
-    .contenido-ventana label,
-    .contenido-ventana input {
-        font-size: 3vw;
+/* Móviles */
+@media (max-width: 480px) {
+    body{
+        background-image: 
+        url('../../media/images/avif/aterrizajeFondo480.avif'),
+        url('../../media/images/avif/aterrizajeFondo480.webp'),
+        url('../../media/images/avif/aterrizajeFondo480.jpg');
     }
-
-    .contenido-ventana .boton {
-        padding: 2vw;
-        font-size: 4vw;
-        margin-top: 4vw;
+    .contenido-ventana{
+        transform: scale(0.7);
     }
-
-    #passwordsDontMatch,
-    #userNotFound,
-    #userAlreadyRegistered,
-    #incorrectPassword,
-    #passwordNotLongEnough {
-        font-size: 2vw;
-    }
-
 }

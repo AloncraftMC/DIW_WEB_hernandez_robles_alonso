@@ -1,0 +1,28 @@
+// _mixins.scss
+@mixin breakpoint($size) {
+    @if $size == movil {
+        @media (max-width: #{$breakpoint-movil}) {
+            @content;
+        }
+    }
+    @else if $size == tableta {
+        @media (max-width: #{$breakpoint-tableta}) and (min-width: #{$breakpoint-movil}) {
+            @content;
+        }
+    }
+    @else if $size == pequeno {
+        @media (max-width: #{$breakpoint-pequeno}) and (min-width: #{$breakpoint-tableta}) {
+            @content;
+        }
+    }
+    @else if $size == estandar {
+        @media (max-width: #{$breakpoint-estandar}) and (min-width: #{$breakpoint-pequeno}) {
+            @content;
+        }
+    }
+    @else if $size == grande {
+        @media (max-width: #{$breakpoint-grande}) and (min-width: #{$breakpoint-estandar}) {
+            @content;
+        }
+    }
+}  

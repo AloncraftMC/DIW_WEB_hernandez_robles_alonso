@@ -1,321 +1,131 @@
-// Variables globales
-$background-path: "../../media/images/";
-$formats: ("avif", "webp", "png");
-$resolutions: (480, 768, 1200, 1920, 2560, 3200);
+// main.scss
+@use 'variables';
+@use 'mixins';
 
-$rubikLight: 'Rubik Light', sans-serif;
-$rubikRegular: 'Rubik Regular', sans-serif;
-$rubikMedium: 'Rubik Medium', sans-serif;
-$azulOscuro: #064156;
-$azulTransparente: #91E2FF80;
-$azulClaro: #8FE1FF;
+@include mixins.font-face('Rubik Medium', variables.$rubik-medium-font);
+@include mixins.font-face('Rubik Regular', variables.$rubik-regular-font);
+@include mixins.font-face('Rubik Light', variables.$rubik-light-font);
 
-// Mezcla para manejar el fondo por resolución y formato
-@mixin responsive-background($base-name) {
-    @each $resolution in $resolutions {
-        @each $format in $formats {
-            @media (min-width: #{$resolution}px) {
-                @supports (background-image: image-set(url("#{$background-path}#{$format}/#{$base-name}#{$resolution}.#{$format}") 1x)) {
-                    background-image: image-set(
-                        url("#{$background-path}avif/#{$base-name}#{$resolution}.avif") type("image/avif") 1x,
-                        url("#{$background-path}webp/#{$base-name}#{$resolution}.webp") type("image/webp") 1x,
-                        url("#{$background-path}png/#{$base-name}#{$resolution}.png") type("image/png") 1x
-                    );
-                }
-            }
-        }
-    }
-}
-
-// @font-face para cargar las fuentes
-@font-face {
-    font-family: 'Rubik Medium';
-    src: url('../../media/fonts/Rubik-Medium.ttf') format('truetype');
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Rubik Regular';
-    src: url('../../media/fonts/Rubik-Regular.ttf') format('truetype');
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Rubik Light';
-    src: url('../../media/fonts/Rubik-Light.ttf') format('truetype');
-    font-display: swap;
-}
-
-// Estilos base
 body {
-    margin: 0;
-    padding: 0;
-    font-family: $rubikRegular;
-    background-color: $azulClaro;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-
-    // Aplicar fondo responsive
-    @include responsive-background("aterrizajeFondo");
+  margin: 0;
+  padding: 0;
+  font-family: variables.$rubik-regular-font;
+  background: url(variables.$background-image) no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
 }
 
 main {
-    text-align: center;
+  text-align: center;
 }
 
 .titulo-goal-tracker {
-    margin: 0;
-    margin-top: 7vh;
-    color: white;
-    font-family: $rubikMedium;
-    font-size: 7.1vw;
-    text-shadow: 0px 0.8vw 0.8vw rgba(0, 0, 0, 0.25);
+  margin: 0;
+  margin-top: 7vh;
+  color: white;
+  font-family: variables.$rubik-medium;
+  font-size: 7.1vw;
+  text-shadow: 0px 0.8vw 0.8vw rgba(0, 0, 0, 0.25);
+
+  @include mixins.breakpoint(movil) {
+    font-size: 15vw;
+    margin-top: 5vh;
+  }
+
+  @include mixins.breakpoint(tableta) {
+    font-size: 9.6vw;
+  }
+
+  @include mixins.breakpoint(pequeno) {
+    font-size: 6.4vw;
+  }
+
+  @include mixins.breakpoint(estandar) {
+    font-size: 5.1vw;
+  }
+
+  @include mixins.breakpoint(grande) {
+    font-size: 4vw;
+  }
 }
 
 .subtitulo-crea-gestiona {
-    margin: 0;
-    margin-top: 3vw;
-    color: white;
-    font-family: $rubikLight;
+  margin: 0;
+  margin-top: 3vw;
+  color: white;
+  font-family: variables.$rubik-light;
+  font-size: 2.8vw;
+  text-shadow: 0px 0.2vw 0.1vw rgba(0, 0, 0, 0.25);
+
+  @include mixins.breakpoint(movil) {
+    font-size: 6vw;
+    margin-top: 6vw;
+  }
+
+  @include mixins.breakpoint(tableta) {
+    font-size: 4.2vw;
+    margin-top: 4.8vw;
+  }
+
+  @include mixins.breakpoint(pequeno) {
+    font-size: 3.5vw;
+  }
+
+  @include mixins.breakpoint(estandar) {
     font-size: 2.8vw;
-    text-shadow: 0px 0.2vw 0.1vw rgba(0, 0, 0, 0.25);
+  }
+
+  @include mixins.breakpoint(grande) {
+    font-size: 2.4vw;
+  }
 }
 
 .botones {
-    margin: 0;
-    margin-top: 5vw;
-    display: flex;
-    justify-content: center;
-    gap: 2vw;
-    padding: 2vw;
-    background-color: $azulTransparente;
-    border-radius: 4vh;
+  margin: 0;
+  margin-top: 5vw;
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
+  padding: 2vw;
+  background-color: variables.$azul-transparente;
+  border-radius: 4vh;
+
+  @include mixins.breakpoint(movil) {
+    flex-direction: column;
+    gap: 3vw;
+    padding: 4vh;
+  }
+
+  @include mixins.breakpoint(tableta) {
+    gap: 3.6vw;
+    padding: 3.6vw;
+  }
 }
 
-.boton,
-.contenido-ventana .boton {
-    font-family: $rubikLight;
-    font-size: 2vw;
-    padding-top: 1.25vw;
-    padding-bottom: 1.25vw;
-    width: 16vw;
-    text-align: center;
-    border: 0.5vh solid black;
-    border-radius: 2vh;
-    cursor: pointer;
-    transition: filter 0.2s ease-in-out;
-    outline: none;
-}
+.boton {
+  font-family: variables.$rubik-light;
+  font-size: 2vw;
+  padding-top: 1.25vw;
+  padding-bottom: 1.25vw;
+  width: 16vw;
+  text-align: center;
+  border: 0.5vh solid black;
+  border-radius: 2vh;
+  cursor: pointer;
+  transition: filter 0.2s ease-in-out;
+  outline: none;
 
-input[type="submit"].boton {
-    border: 0.5vh solid black;
-    border-radius: 2vh;
-}
-
-.boton:hover {
-    filter: brightness(0.75);
-}
-
-.boton-blanco {
-    background-color: white;
-    color: black;
-    box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.5);
-    margin-right: 0.4vw;
-}
-
-.boton-azul {
-    background-color: $azulOscuro;
-    color: white;
-    box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.5);
-    margin-left: 0.4vw;
-    min-width: 150px;
-}
-
-.ventana-login,
-.ventana-registro {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-}
-
-.contenido-ventana {
-    background-color: white;
-    color: black;
-    padding: 3vw;
-    width: 30vw;
-    border-radius: 4vh;
-}
-
-.titulo-ventana {
-    margin-top: 0;
-    text-align: center;
-    font-family: $rubikMedium;
-    font-size: 2vw;
-}
-
-.contenido-ventana label {
-    font-size: 1.5vw;
-    margin-top: 2vw;
-}
-
-.contenido-ventana input {
-    width: 85%;
-    padding: 1vw;
-    margin-top: 0.5vw;
-    margin-bottom: 1.5vw;
-    margin-left: 0;
-    margin-right: 0;
-    border: 0.2vw solid #ccc;
-    border-radius: 1vw;
-    font-family: $rubikLight;
-    font-size: 1.5vw;
-}
-
-.contenido-ventana .boton {
-    background-color: $azulClaro;
-    color: black;
-    padding: 1.2vw;
-    font-size: 2.2vw;
-    margin-top: 2vw;
-    text-align: center;
-    width: auto;
-}
-
-.botones-ventana {
-    display: flex;
-    justify-content: center;
+  @include mixins.breakpoint(movil) {
+    font-size: 4.5vw;
     width: 100%;
-}
+    padding: 2vh;
+  }
 
-#passwordsDontMatch,
-#userNotFound,
-#userAlreadyRegistered,
-#incorrectPassword,
-#passwordNotLongEnough {
-    color: red;
-    margin-top: 0;
-    text-align: left;
-    font-family: $rubikLight;
-    font-size: 1.2vw;
-    display: none;
-}
-
-// Versión Tabletas
-@media (max-width: 1100px) and (min-width: 750px) {
-    .titulo-goal-tracker {
-        font-size: 9.6vw;
-    }
-
-    .subtitulo-crea-gestiona {
-        font-size: 4.2vw;
-        margin-top: 4.8vw;
-    }
-
-    .botones {
-        gap: 3.6vw;
-        padding: 3.6vw;
-        border-radius: 3.6vw;
-    }
-
-    .boton {
-        font-size: 3vw;
-        width: 21.6vw;
-        padding: 1.8vw;
-    }
-
-    .contenido-ventana {
-        width: 40vw;
-        max-width: 720px;
-        padding: 3.6vw;
-    }
-
-    .titulo-ventana {
-        font-size: 3.6vw;
-    }
-
-    .contenido-ventana label,
-    .contenido-ventana input {
-        font-size: 2.4vw;
-    }
-
-    .contenido-ventana .boton {
-        padding: 1.7vw;
-        font-size: 3.4vw;
-        margin-top: 3vw;
-    }
-
-    #passwordsDontMatch,
-    #userNotFound,
-    #userAlreadyRegistered,
-    #incorrectPassword,
-    #passwordNotLongEnough {
-        font-size: 1.8vw;
-    }
-}
-
-// Versión Móviles
-@media (max-width: 750px) {
-    body {
-        padding: 5vh 2vw;
-    }
-
-    .titulo-goal-tracker {
-        font-size: 15vw;
-        margin-top: 5vh;
-    }
-
-    .subtitulo-crea-gestiona {
-        font-size: 6vw;
-        margin-top: 6vw;
-    }
-
-    .botones {
-        flex-direction: column;
-        gap: 3vw;
-        padding: 4vh;
-        border-radius: 4vw;
-    }
-
-    .boton {
-        font-size: 4.5vw;
-        width: 100%;
-        padding: 2vh;
-        min-width: 150px;
-    }
-
-    .contenido-ventana {
-        width: 300px;
-        padding: 4vw;
-    }
-
-    .titulo-ventana {
-        font-size: 5vw;
-    }
-
-    .contenido-ventana label,
-    .contenido-ventana input {
-        font-size: 3.5vw;
-    }
-
-    .contenido-ventana .boton {
-        padding: 3vw;
-        font-size: 4vw;
-        margin-top: 5vw;
-    }
-
-    #passwordsDontMatch,
-    #userNotFound,
-    #userAlreadyRegistered,
-    #incorrectPassword,
-    #passwordNotLongEnough {
-        font-size: 3vw;
-    }
+  @include mixins.breakpoint(tableta) {
+    font-size: 3vw;
+    width: 21.6vw;
+    padding: 1.8vw;
+  }
 }

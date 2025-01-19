@@ -31,7 +31,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: var(--rubikRegular);
-    background: url('../../media/images/png/landingPageBackground.png') no-repeat center center fixed;
+    background: url('../../media/images/avif/aterrizajeFondo.avif') no-repeat center center fixed;
     background-size: cover;
     display: flex;
     justify-content: center;

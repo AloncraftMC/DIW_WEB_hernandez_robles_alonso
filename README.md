@@ -2,9 +2,110 @@
 
 ## Índice de Contenidos
 
+- [Tarea 10 - Preparando Imágenes para Reactividad](#tarea-10---preparando-imágenes-para-reactividad)
 - [Tarea 9 - Preparando Recursos](#tarea-9---preparando-recursos)
 - [Antigua Tarea 9 - Preparando Recursos](#antigua-tarea-9---preparando-recursos)
 - [Antigua Tarea 9 - Página de Inicio](#antigua-tarea-9---página-de-inicio)
+
+---
+
+## Tarea 10 - Preparando imágenes para reactividad
+
+Alonso Hernández Robles 2º DAW AULA
+
+> Vamos a preparar las imágenes de tal forma que no se descarguen imágenes mayores que la resolución de la pantalla del usuario desperdiciando ancho de banda y tiempo. Para ello, vamos a usar los siguientes puntos de ruptura:
+>
+> - 480px: Móviles
+> - 768px: Tabletas
+> - 1200px: Pantallas pequeñas
+> - 1920px: Pantallas estándar
+> - 2560px: Pantallas grandes
+>
+> Por tanto, debes redimensionar cada formato de imagen de la tarea 9, a 6 resoluciones distintas: una menor que 480px, otra entre cada par de puntos de ruptura y otra mayor que 2560px.
+>
+> Requisitos mínimos:
+>
+> - Deben redimensionarse cada uno de los tres formatos de cada imagen de la tarea 9 a 6 resoluciones distintas
+> - El nombre del fichero debe ser descriptivo, tanto de su contenido, como de su resolución
+
+Para comenzar, se ha eliminado el formato PNG ya que no será requerido para la realización de la página web de "Goal Tracker". Los formatos AVIF, WebP y JPG bastan.
+
+Con estas condiciones, se infiere que se necesitará un total de:
+
+*3 formatos x 6 resoluciones x 3 imágenes = **54 imágenes totales***
+
+Dichas 54 imágenes están disponibles en la [Carpeta de Imágenes del Repositorio de GitHub DIW_hernandez_robles_alonso](https://github.com/AloncraftMC/DIW_WEB_hernandez_robles_alonso/tree/main/media/images).
+
+En las próximas 3 páginas se muestran tres tablas con la nomenclatura de cada archivo individualmente en función de la imagen en sí:
+
+- **Página de Aterrizaje:**
+
+| Imagen                | Resolución (px) | Formato   |
+|-----------------------|-----------------|-----------|
+| aterrizajeFondo480.avif | 480             | .avif     |
+| aterrizajeFondo768.avif | 768             | .avif     |
+| aterrizajeFondo1200.avif| 1200            | .avif     |
+| aterrizajeFondo1920.avif| 1920            | .avif     |
+| aterrizajeFondo2560.avif| 2560            | .avif     |
+| aterrizajeFondo3200.avif| 3200            | .avif     |
+| aterrizajeFondo480.webp | 480             | .webp     |
+| aterrizajeFondo768.webp | 768             | .webp     |
+| aterrizajeFondo1200.webp| 1200            | .webp     |
+| aterrizajeFondo1920.webp| 1920            | .webp     |
+| aterrizajeFondo2560.webp| 2560            | .webp     |
+| aterrizajeFondo3200.webp| 3200            | .webp     |
+| aterrizajeFondo480.jpg  | 480             | .jpg      |
+| aterrizajeFondo768.jpg  | 768             | .jpg      |
+| aterrizajeFondo1200.jpg | 1200            | .jpg      |
+| aterrizajeFondo1920.jpg | 1920            | .jpg      |
+| aterrizajeFondo2560.jpg | 2560            | .jpg      |
+| aterrizajeFondo3200.jpg | 3200            | .jpg      |
+
+- **Contacto:**
+
+| Imagen                | Resolución (px) | Formato   |
+|-----------------------|-----------------|-----------|
+| contactoFondo480.avif   | 480             | .avif     |
+| contactoFondo768.avif   | 768             | .avif     |
+| contactoFondo1200.avif  | 1200            | .avif     |
+| contactoFondo1920.avif  | 1920            | .avif     |
+| contactoFondo2560.avif  | 2560            | .avif     |
+| contactoFondo3200.avif  | 3200            | .avif     |
+| contactoFondo480.webp   | 480             | .webp     |
+| contactoFondo768.webp   | 768             | .webp     |
+| contactoFondo1200.webp  | 1200            | .webp     |
+| contactoFondo1920.webp  | 1920            | .webp     |
+| contactoFondo2560.webp  | 2560            | .webp     |
+| contactoFondo3200.webp  | 3200            | .webp     |
+| contactoFondo480.jpg    | 480             | .jpg      |
+| contactoFondo768.jpg    | 768             | .jpg      |
+| contactoFondo1200.jpg   | 1200            | .jpg      |
+| contactoFondo1920.jpg   | 1920            | .jpg      |
+| contactoFondo2560.jpg   | 2560            | .jpg      |
+| contactoFondo3200.jpg   | 3200            | .jpg      |
+
+- **Tutoriales:**
+
+| Imagen                | Resolución (px) | Formato   |
+|-----------------------|-----------------|-----------|
+| tutorialesFondo480.avif | 480             | .avif     |
+| tutorialesFondo768.avif | 768             | .avif     |
+| tutorialesFondo1200.avif| 1200            | .avif     |
+| tutorialesFondo1920.avif| 1920            | .avif     |
+| tutorialesFondo2560.avif| 2560            | .avif     |
+| tutorialesFondo3200.avif| 3200            | .avif     |
+| tutorialesFondo480.webp | 480             | .webp     |
+| tutorialesFondo768.webp | 768             | .webp     |
+| tutorialesFondo1200.webp| 1200            | .webp     |
+| tutorialesFondo1920.webp| 1920            | .webp     |
+| tutorialesFondo2560.webp| 2560            | .webp     |
+| tutorialesFondo3200.webp| 3200            | .webp     |
+| tutorialesFondo480.jpg  | 480             | .jpg      |
+| tutorialesFondo768.jpg  | 768             | .jpg      |
+| tutorialesFondo1200.jpg | 1200            | .jpg      |
+| tutorialesFondo1920.jpg | 1920            | .jpg      |
+| tutorialesFondo2560.jpg | 2560            | .jpg      |
+| tutorialesFondo3200.jpg | 3200            | .jpg      |
 
 ---
 

@@ -11,8 +11,6 @@
 
 ## Tarea 10 - Preparando imágenes para reactividad
 
-Alonso Hernández Robles 2º DAW AULA
-
 > Vamos a preparar las imágenes de tal forma que no se descarguen imágenes mayores que la resolución de la pantalla del usuario desperdiciando ancho de banda y tiempo. Para ello, vamos a usar los siguientes puntos de ruptura:
 >
 > - 480px: Móviles

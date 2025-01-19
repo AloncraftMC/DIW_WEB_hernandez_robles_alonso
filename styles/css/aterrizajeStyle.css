@@ -49,8 +49,6 @@ main {
   padding: 40px;
   background-color: rgba(145, 226, 255, 0.5);
   border-radius: 4vh;
-  /* Botón en sí */
-  /* Regla para que los botones se apilen en pantallas pequeñas */
 }
 .botones .boton {
   font-size: calc(0.5vw + 3vh);

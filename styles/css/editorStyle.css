@@ -1,0 +1,19 @@
+@charset "UTF-8";
+/* CSS para la página del editor */
+body {
+  font-family: "Rubik Regular", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f8ff;
+  color: #064156;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+}
+
+main {
+  transform: scale(2);
+}/*# sourceMappingURL=editorStyle.css.map */

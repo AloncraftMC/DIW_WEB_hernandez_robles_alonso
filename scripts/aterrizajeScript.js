@@ -4,7 +4,7 @@ function redirect() {
 
     if(getCurrentUser() != null){
         
-        //  window.location.href = "pages/editor.html"; // (=> Después de Tarea 11)
+        window.location.href = "pages/editor.html"; // (=> Después de Tarea 11)
     
     }
     
@@ -237,5 +237,3 @@ function disposeWindow(event) {
 
 document.addEventListener("mousedown", disposeWindow);
 document.addEventListener("keydown", disposeWindow);
-
-redirect();

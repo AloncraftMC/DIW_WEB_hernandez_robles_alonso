@@ -1,18 +1,29 @@
+import { 
+    getUsers, 
+    setUsers, 
+    getCurrentUser, 
+    setCurrentUser,
+    animacionVentana 
+} from './userFunctions.js';
+
 // Redirección a "editor.html" si hay una sesión iniciada
 
 function redirect() {
 
     if(getCurrentUser() != null){
         
-        window.location.href = "pages/editor.html"; // (=> Después de Tarea 11)
+        const finalURL = new URL("../pages/editor.html", import.meta.url); // (=> Después de Tarea 11)
+        window.location.href = finalURL.href;
     
     }
     
 }
 
+redirect();
+
 // Abrir ventana de "Iniciar Sesión"
 
-function openLoginWindow() {
+async function openLoginWindow() {
 
     const loginUserInput = document.getElementById("loginUser");
     const loginPasswordInput = document.getElementById("loginPassword");
@@ -23,7 +34,11 @@ function openLoginWindow() {
         event.target.placeholder = "";
     }
 
-    document.getElementById("loginWindow").style.display = "flex";
+    // Mostrar ventana poco a poco
+
+    animacionVentana("loginWindow", "aparecer");
+
+    // Añadir los escuchadores de evento
 
     loginUserInput.addEventListener("input", setEmpty);
     loginPasswordInput.addEventListener("input", setEmpty);
@@ -32,7 +47,7 @@ function openLoginWindow() {
 
 // Abrir ventana de "Registrarse"
 
-function openRegisterWindow() {
+async function openRegisterWindow() {
 
     const registerUserInput = document.getElementById("registerUser");
     const registerPasswordInput = document.getElementById("registerPassword");
@@ -76,7 +91,9 @@ function openRegisterWindow() {
 
     }
 
-    document.getElementById("registerWindow").style.display = "flex";
+    // Mostrar ventana poco a poco
+
+    animacionVentana("registerWindow", "aparecer");
 
     registerUserInput.addEventListener("input", checkInput);
     registerPasswordInput.addEventListener("input", checkInput);
@@ -86,7 +103,7 @@ function openRegisterWindow() {
 
 // Al hacer clic sobre el botón de "Entrar"
 
-function login() {
+async function login() {
 
     const loginUserInput = document.getElementById("loginUser");
     const loginPasswordInput = document.getElementById("loginPassword");
@@ -111,7 +128,7 @@ function login() {
     const username = loginUserInput.value;
     const password = loginPasswordInput.value;
 
-    users = getUsers();
+    const users = getUsers();
     const userFound = username in users;
 
     if (!userFound) {
@@ -136,13 +153,15 @@ function login() {
     textIncorrectPassword.style.display = "none";
 
     setCurrentUser(username);
+    
+    await animacionVentana("loginWindow", "desaparecer");
     redirect();
 
 }
 
 // Al hacer clic sobre el botón de "Registrarse"
 
-function register() {
+async function register() {
 
     const registerUserInput = document.getElementById("registerUser");
     const registerPasswordInput = document.getElementById("registerPassword");
@@ -181,7 +200,7 @@ function register() {
 
     // Comprueba si existe el usuario
 
-    users = getUsers();
+    const users = getUsers();
     const userExists = username in users;
 
     if (userExists) {
@@ -199,6 +218,8 @@ function register() {
     setUsers(users);
 
     setCurrentUser(username);
+
+    await animacionVentana("registerWindow", "desaparecer");
     redirect();
 
 }
@@ -210,14 +231,14 @@ function disposeWindow(event) {
     const loginWindow = document.getElementById("loginWindow");
     const registerWindow = document.getElementById("registerWindow");
 
-    // Si se hace clic fuera de la ventana
+    // Si se hace clic, OJO: fuera! de la ventana (en el padding. La ventana es el objeto en sí y por eso no cuenta)
 
     if (event.target === loginWindow) {
-        loginWindow.style.display = "none";
+        animacionVentana("loginWindow", "desaparecer");
     }
 
     if (event.target === registerWindow) {
-        registerWindow.style.display = "none";
+        animacionVentana("registerWindow", "desaparecer");
     }
 
     // Si se presiona "Esc"
@@ -225,10 +246,10 @@ function disposeWindow(event) {
     if (event.key === "Escape") {
 
         if (loginWindow.style.display !== "none") {
-            loginWindow.style.display = "none";
+            animacionVentana("loginWindow", "desaparecer");
         }
         if (registerWindow.style.display !== "none") {
-            registerWindow.style.display = "none";
+            animacionVentana("registerWindow", "desaparecer");
         }
 
     }
@@ -237,3 +258,14 @@ function disposeWindow(event) {
 
 document.addEventListener("mousedown", disposeWindow);
 document.addEventListener("keydown", disposeWindow);
+
+// ¿Por qué cojones no se ejecuta esto hermano? Parcel = mierda
+
+// Hacer elementos globales (en módulos, HTML es tonto del culo y no sabe encontrar los elementos de JS, para la próxima no te compliques y no modularices que esto es un mojón, pero claro el puto parcel no deja empaquetar sin módulos)
+// Envuelve las asignaciones al objeto global en el evento DOMContentLoaded
+document.addEventListener("DOMContentLoaded", () => {
+    window.openLoginWindow = openLoginWindow;
+    window.openRegisterWindow = openRegisterWindow;
+    window.login = login;
+    window.register = register;
+});

@@ -1,69 +1,30 @@
-// Redirección a "index.html" si hay una sesión iniciada
+// Añadir funcionalidad al botón de crear...
 
-function redirect() {
+const createButton = document.getElementById("createButton");
 
-    if(getCurrentUser() === null){
+createButton.addEventListener("click", () => {
 
-        window.location.href = "../index.html";
-        
-    }
-    
-}
+    createButton.classList.toggle("activo");
 
-redirect();
+    const opciones = document.getElementById("createOptions");
+    opciones.classList.toggle("oculto");
 
-// Para cerrar sesión ya se hará bien luego
-
-document.getElementsByTagName("h2")[0].textContent += getCurrentUser();
-
-function logout(){
-    localStorage.removeItem("currentUser");
-    redirect();
-}
-
-
-const createDropdown = document.getElementById('createDropdown');
-const createOptions = document.getElementById('createOptions');
-const emptyCanvasMessage = document.getElementById('emptyCanvasMessage');
-const canvas = document.getElementById('canvas');
-const inspector = document.getElementById('inspectorContent');
-const deleteElementButton = document.getElementById('deleteElement');
-
-// Función para mostrar/ocultar el menú desplegable
-createDropdown.addEventListener('click', () => {
-    createOptions.classList.toggle('hidden');
 });
 
-// Crear elementos dinámicos en el lienzo
-createOptions.addEventListener('click', (event) => {
-    const option = event.target.id;
-    if (option === 'createMedal' || option === 'createGoal') {
-        const newElement = document.createElement('div');
-        newElement.className = 'canvas-element';
-        newElement.textContent = option === 'createMedal' ? 'Nueva Medalla' : 'Nuevo Objetivo';
-        newElement.addEventListener('click', () => {
-            selectElement(newElement);
-        });
-        canvas.appendChild(newElement);
-        emptyCanvasMessage.classList.add('hidden');
-    }
-});
+// Alerta de No Funcionalidad
 
-// Selección de un elemento
-function selectElement(element) {
-    inspector.querySelector('#elementTitle').textContent = element.textContent;
-    inspector.querySelector('#elementDescription').textContent = 'Descripción del elemento';
-    inspector.classList.remove('hidden');
+const createFirstMedal = document.getElementById("emptyWorkspace");
+const createMedalButton = document.getElementById("createMedal");
+const createMedalFolderButton = document.getElementById("createMedalFolder");
+const createObjectiveButton = document.getElementById("createObjective");
+const createObjectiveFolderButton = document.getElementById("createObjectiveFolder");
+
+function showFunctionalityAlert(){
+    window.alert("La funcionalidad de este objeto no se va a implementar.");
 }
 
-// Eliminar un elemento seleccionado
-deleteElementButton.addEventListener('click', () => {
-    const selectedElement = canvas.querySelector('.selected');
-    if (selectedElement) {
-        canvas.removeChild(selectedElement);
-        inspector.classList.add('hidden');
-        if (canvas.children.length === 0) {
-            emptyCanvasMessage.classList.remove('hidden');
-        }
-    }
-});
+createFirstMedal.addEventListener("click", showFunctionalityAlert);
+createMedalButton.addEventListener("click", showFunctionalityAlert);
+createMedalFolderButton.addEventListener("click", showFunctionalityAlert);
+createObjectiveButton.addEventListener("click", showFunctionalityAlert);
+createObjectiveFolderButton.addEventListener("click", showFunctionalityAlert);

@@ -29,7 +29,9 @@ $rubikMedium: 'Rubik Medium', sans-serif;
 // Variables de colores
 $azulOscuro: #064156;
 $azulTransparente: rgba(145, 226, 255, 0.5);
+$azulMedio: #00BBFF;
 $azulClaro: #8FE1FF;
+$azulTransparenteClaro: rgba(206, 242, 255, 0.957);
 
 // Variables de tamaños para los puntos de ruptura
 $puntosRuptura: (
@@ -44,3 +46,7 @@ $puntosRuptura: (
 $borderRadius: 2vh;
 $buttonShadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.5);
 $transitionSpeed: 0.2s;
+$botonesColores: (
+    blanco: white,
+    azul: $azulOscuro
+);

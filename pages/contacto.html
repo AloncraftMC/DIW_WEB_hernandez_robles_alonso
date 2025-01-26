@@ -1,49 +1,80 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Goal Tracker - Contacto</title>
     <link rel="stylesheet" href="../styles/css/contactoStyle.css" type="text/css">
     <link rel="icon" href="../media/favicons/favicon.ico" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <script type="module" src="../scripts/userFunctions.js"></script>
+    <script type="module" src="../scripts/userConfigScript.js"></script>
+
 </head>
 <body>
+
     <header>
-        <section>
+
+        <section class="header-izquierdo">
+
             <h1>GOAL TRACKER</h1>
-            <a href="editor.html">Editor</a>
-            <a href="tutoriales.html">Tutoriales</a>
+            <a href="./editor.html">Editor</a>
+            <a href="./tutoriales.html">Tutoriales</a>
+
         </section>
-        <img src="../media/images/svg/configuracion.svg" alt="Configuración">
+
+        <section class="header-derecho">
+
+            <img src="../media/images/svg/configuracion.svg" alt="Configuración" onclick="openConfigWindow()">
+            <img src="../media/images/png/user.png" id="userAvatar" onclick="openUserWindow()">
+            
+            <section class="texto-usuario">
+                <p class="nombre-usuario" id="userName">Usuario</p>
+                <p class="medallas-usuario">(0/0) Medallas</p>
+            </section>
+
+        </section>
+
     </header>
 
     <main>
+
         <h1>Contacto</h1>
-        <section id="contact-container">
-            <section id="mapa-section">
-                <h3>Mapa</h3>
-                <iframe
-                    id="mapa"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.95565131531506!3d-37.81732897975185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d3f1b7a2ec1c!2sMelbourne!5e0!3m2!1ses!2ses!4v1614326957052!5m2!1ses!2ses"
-                    allowfullscreen=""
-                    loading="lazy">
-                </iframe>
+
+        <section class="contenedor-contacto">
+
+            <section class="seccion-mapa">
+                <h1>Mapa</h1>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3179.2246402853357!2d-3.603523847885133!3d37.17113207633115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd71fd999432e133%3A0xf6343a4bcebbed9a!2sNTT%20DATA%20Granada!5e0!3m2!1ses!2ses!4v1737663078222!5m2!1ses!2ses" allowfullscreen="" loading="lazy"></iframe>
             </section>
-            <section id="form-section">
-                <h3>Escribe un correo</h3>
+
+            <section class="seccion-formulario">
+
+                <h1>Escribe un correo</h1>
+
                 <form>
-                    <div class="form-inputs">
-                        <input type="text" placeholder="¿Cómo te llamamos?">
-                        <input type="email" placeholder="Tu correo es...">
-                        <textarea placeholder="Escribe aquí tu mensaje..."></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">
-                        <img src="../media/images/svg/correo.svg" alt="Correo">
-                        Enviar
-                    </button>
+
+                    <section class="inputs-formulario">
+                        <input type="text" placeholder="¿Cómo te llamamos?" required>
+                        <input type="email" placeholder="Tu correo es..." required>
+                        <textarea placeholder="Escribe aquí tu mensaje..." required></textarea>
+                    </section>
+
+                    <section class="contenedor-boton">
+                        <button type="submit" class="boton-enviar">
+                            <img src="../media/images/svg/correo.svg" alt="Correo">
+                            Enviar
+                        </button>
+                    </section>
+
                 </form>
+
             </section>
+
         </section>
+
     </main>
 
     <footer>
@@ -51,5 +82,105 @@
         <a href="#">Política de Privacidad</a>
         <a href="#">Sobre Nosotros</a>
     </footer>
+
+    <div class="ventana-configuracion" id="configWindow">
+
+        <section class="contenido-ventana">
+
+            <p class="titulo-ventana">Configuración</p>
+
+            <section class="configuracion">
+                <label for="sonido">Efectos de sonido:</label>
+                <input type="checkbox" name="sonido" id="soundCheckbox">
+            </section>
+
+            <div class="botones-ventana">
+                <button class="boton boton-azul confirmar-cambios" onclick="disposeConfigWindow()">Aceptar</button>
+            </div>
+
+        </section>
+        
+    </div>
+
+    <div class="ventana-usuario" id="userWindow">
+        
+        <section class="contenido-ventana">
+
+            <section class="informacion-usuario">
+
+                <div class="avatar-container">
+
+                    <img src="../media/images/png/user.png" class="user-avatar" id="userAvatar">
+                    <img src="../media/images/svg/editar.svg" class="edit-icon" id="editIcon">
+                    <input type="file" id="fileInput"/>
+
+                </div>
+
+                <p class="nombre-usuario" id="userName">Usuario</p>
+                <p class="medallas-usuario">(0/0) Medallas</p>
+
+            </section>
+
+            <section class="campos-usuario">
+
+                <section>
+                    <label for="cambiarNombre">Cambiar nombre de usuario:</label>
+                    <input type="text" name="cambiarNombre" id="changeUsernameInput">
+                </section>
+
+                <section>
+                    <label for="cambiarContrasena">Cambiar contraseña:</label>
+                    <input type="password" name="cambiarContrasena" id="changePasswordInput">
+                </section>
+
+                <section>
+                    <p id="passwordNotLongEnough">La contraseña debe tener 8 caracteres como mínimo.</p>
+                    <p id="userAlreadyRegistered">Este usuario ya se encuentra registrado.</p>
+                    <p id="changedData">
+                        <i class="fa-solid fa-check"></i>
+                        Cambios guardados correctamente.
+                    </p>
+                </section>
+
+            </section>
+
+            <div class="botones-ventana">
+                
+                <button class="boton boton-azul confirmar-cambios" onclick="confirmChanges()">Confirmar cambios</button>
+
+                <input type="submit" class="boton boton-azul" value="Cerrar sesión" onclick="logoutSession()">
+
+                <button class="boton boton-blanco" onclick="openConfirmWindow()">
+                    <img src="../media/images/svg/papelera.svg">
+                    Borrar cuenta
+                </button>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <div class="ventana-confirmacion" id="confirmWindow">
+
+        <section class="contenido-ventana">
+
+            <p class="titulo-ventana" id="confirmText">¿Estás seguro que quieres borrar?</p>
+
+            <div class="botones-ventana">
+
+                <button class="boton boton-blanco" onclick="deleteAccount()">
+                    <img src="../media/images/svg/papelera.svg">
+                    Borrar
+                </button>
+
+                <button class="boton boton-azul confirmar-cambios" onclick="disposeConfirmWindow()">Cancelar</button>
+            
+            </div>
+
+        </section>
+
+    </div>
+
 </body>
 </html>

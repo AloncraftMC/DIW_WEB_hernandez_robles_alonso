@@ -53,7 +53,7 @@ main {
     display: flex;
     justify-content: center;
     gap: 2vw;
-    padding: calc(1vw + 1.5vh);
+    padding: 2em;
     background-color: $azulTransparente;
     border-radius: calc(4vh);
 
@@ -69,8 +69,9 @@ main {
 
 }
 
-/* Botón genérico */
-.boton {
+/* Botón base */
+
+.boton-base{
     font-family: $rubikLight;
     font-size: 2vw;
     padding-top: 2.25vh;
@@ -88,16 +89,19 @@ main {
     }
 }
 
-.boton-blanco {
-    background-color: white;
-    color: black;
-    margin-right: 0.4vw;
+/* Botón genérico - Herencia */
+.boton {
+    @extend .boton-base;
 }
 
-.boton-azul {
-    background-color: $azulOscuro;
-    color: white;
-    margin-left: 0.4vw;
+/* Botones de colores - Interpolación */
+
+@each $nombre, $color in $botonesColores {
+    .boton-#{$nombre} {
+        background-color: $color;
+        color: if($color == white, black, white);
+        margin-#{if($nombre == blanco, 'right', 'left')}: 0.4vw;
+    }
 }
 
 /* Ventana que ocupa lo que es el widget + el espacio negativo negro semi-transparente de alrededor, que se extiende hasta el límite de la pantalla */
@@ -257,7 +261,6 @@ main {
     .botones {
         flex-direction: column;
         gap: 1.5vh;
-        padding: calc(1vw + 1vh);
         transform: scale(0.7);
     }
 

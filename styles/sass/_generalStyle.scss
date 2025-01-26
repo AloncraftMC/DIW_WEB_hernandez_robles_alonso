@@ -1,0 +1,545 @@
+// Importaciones de módulos
+@import 'variables';
+@import 'mixins';
+@import 'functions';
+
+/* Acomodar todos los elementos incluyendo lo de fuera (padding, border...) de los elementos en el cálculo de sus dimensiones */
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $rubikMedium;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 2rem;
+    background-color: white;
+    color: black;
+    width: 100%;
+    z-index: 0;
+    box-shadow: 0px 0px 10px black;
+}
+
+/* Parte izquierda del header */
+.header-izquierdo {
+    
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    // Título GOAL TRACKER
+    h1{
+        font-size: 1.5rem;
+    }
+
+    // Botones del header izquierdo
+    a{
+
+        text-decoration: none;
+        background-color: $azulClaro;
+        padding: 0.5rem 1rem;
+        border-radius: 0.7em;
+        color: black;
+        font-family: $rubikRegular;
+        transition: filter $transitionSpeed;
+
+        &:hover{
+            filter: brightness(0.75);
+        }
+
+    }
+
+}
+
+/* Parte derecha del header */
+.header-derecho{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+
+    // Iconos
+    img{
+        border-right: 1em;
+        cursor: pointer;
+    }
+
+    // Icono de configuración
+    img:nth-child(1){
+     
+        width: 2em;
+        height: 2em;
+        transition: 1s;
+    
+        &:hover{
+            transform: rotate(360deg);
+        }
+    
+    }
+
+    // Icono de usuario
+    img:nth-child(2){
+
+        width: 3em;
+        height: 3em;
+        border-radius: 50%;
+        overflow: hidden;
+        object-fit: cover;
+
+    }
+
+}
+
+/* Texto al lado del icono del usuario en el header derecho */
+.texto-usuario{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p{
+        margin: 0.25em;
+    }
+
+    // El nombre del usuario
+    .nombre-usuario{
+        font-family: $rubikRegular;
+    }
+
+    // Sus medallas
+    .medallas-usuario{
+        font-family: $rubikLight;
+        text-align: center;
+    }
+
+}
+
+main {
+
+    text-align: center;
+    padding: 2rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    color: white;
+    width: 100%;
+    min-height: 100vh;
+
+    // Título de la página en el main
+    h1{
+        font-size: 2rem;
+    }
+
+}
+
+footer {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 2rem;
+    padding: 1rem;
+    background-color: #2D2D2D;
+    color: lightgray;
+    width: 100%;
+    top: 1rem;
+    position: relative;
+
+    // Textos en sí pseudo-enlaces
+    a{
+
+        color: lightgray;
+        text-decoration: none;
+        font-family: $rubikRegular;
+        transition: color $transitionSpeed;
+
+        &:hover{
+            color: white;
+        }
+
+    }
+
+}
+
+/* Contenedor de la configuración */
+.configuracion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem; /* Espacio entre el texto y la casilla */
+    width: 100%;
+}
+
+/* Estilo del texto */
+.configuracion label {
+    transform: translate(0%, -70%);
+    font-size: 1.5rem;
+    font-family: $rubikRegular;
+    color: black;
+    line-height: 1; /* Asegura que el texto esté alineado con la casilla */
+}
+
+/* Estilo del checkbox */
+.configuracion input[type="checkbox"] {
+    min-width: 1em;
+    width: 2em;
+    height: 2em;
+    cursor: pointer;
+    accent-color: $azulClaro;
+    display: inline-block;
+}
+
+/* Botón genérico */
+.boton {
+
+    font-family: $rubikLight;
+    font-size: 2vw;
+    padding-top: 2.25vh;
+    padding-bottom: 2.25vh;
+    width: 30vh;
+    text-align: center;
+    border: 0.5vh solid black;
+    border-radius: 2vh;
+    cursor: pointer;
+    transition: filter 0.2s ease-in-out;
+    outline: none;
+    box-shadow: $buttonShadow;
+
+    &:hover{
+        filter: brightness(0.75);
+    }
+
+}
+
+// Botón blanco
+.boton-blanco {
+
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4em;
+
+    img{
+        width: 1em;
+    }
+
+}
+
+/* Botón azul oscuro */
+.boton-azul {
+    background-color: $azulOscuro;
+    color: white;
+}
+
+/* Botón de confirmar cambios (azul claro)*/
+.confirmar-cambios{
+    background-color: $azulClaro;
+    color: black;
+}
+
+/* Ventana que ocupa lo que es el widget + el espacio negativo negro semi-transparente de alrededor,que se extiende hasta el límite de la pantalla */
+.ventana-configuracion,
+.ventana-usuario,
+.ventana-confirmacion {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+/* Lo que es el widget de la ventana en sí */
+.contenido-ventana {
+    
+    transform: scale(0.75);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    text-align: left;
+    color: black;
+    padding: 6vh;
+    width: 80vh;
+    gap: 2rem;
+    border-radius: 4vh;
+
+    // Región con el nombre y las medallas del usuario en la ventana de usuario
+    .informacion-usuario{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        // El icono de perfil
+        img{
+            width: 5rem;
+            height: 5rem;
+            margin-bottom: 1em;
+        }
+
+        p{
+            margin: 0.4em;
+            font-size: 120%;
+        }
+
+        // El nombre del usuario
+        .nombre-usuario{
+            font-family: $rubikRegular;
+            font-size: 200%;
+        }
+
+        // Sus medallas
+        .medallas-usuario{
+            font-family: $rubikLight;
+        }
+
+    }
+
+}
+
+// El título de la ventana (no aplicado a ventana de usuario porque no tiene título)
+.titulo-ventana {
+    margin-top: 0;
+    font-family: $rubikMedium;
+    font-size: 4vh;
+    text-align: center;
+}
+
+/* Título de un campo en la ventana de usuario */
+.contenido-ventana section label,
+.contenido-ventana section section label {
+    font-size: 3vh;
+    margin-top: 4vh;
+    font-family: $rubikRegular;
+}
+
+/* Input de formulario en ventana de usuario */
+.contenido-ventana section input,
+.contenido-ventana section section input {
+    width: 85%;
+    padding: 2vh;
+    margin-top: 1vh;
+    margin-bottom: 3vh;
+    margin-left: 0;
+    margin-right: 0;
+    border: 0.4vh solid #ccc;
+    border-radius: 2vh;
+    font-family: $rubikLight;
+    font-size: 3vh;
+}
+
+/* Botón en ventana */
+.contenido-ventana div .boton {
+    padding: 2.4vh;
+    font-size: 4.4vh;
+    margin-top: 4vh;
+    text-align: center;
+    width: auto;
+    border: 0.5vh solid black;
+}
+
+/* Contenedor de los botones en la ventana */
+.botones-ventana {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Textos de error en los inputs */
+#userAlreadyRegistered,
+#passwordNotLongEnough {
+    color: red;
+    margin-top: 0;
+    text-align: left;
+    font-family: $rubikLight;
+    font-size: 1.4em;
+    display: none;
+}
+
+/* Texto de éxito en los inputs */
+#changedData {
+    color: green;
+    margin-top: 0;
+    text-align: left;
+    font-family: $rubikLight;
+    font-size: 1.7em;
+    display: none;
+}
+
+/* Ventana de confirmación */
+.ventana-confirmacion{
+
+    // El contenido de la ventana de confirmación, en sí
+    .contenido-ventana{
+    
+        gap: 0;
+        width: 40em;
+    
+        .titulo-ventana{
+            font-family: $rubikRegular;
+        }
+    
+    }
+
+}
+
+/* La imagen es un contenedor en realidad: este es. */
+.avatar-container {
+
+    transform: scale(1.5);
+    margin: 2em;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    overflow: hidden;
+
+    // La imagen de perfil en sí
+    .user-avatar {
+        object-fit: cover;
+        transition: opacity 0.3s ease;
+    }
+
+    // El icono svg del lápiz para editar la foto
+    .edit-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.5);
+        opacity: 0;
+        transition: opacity $transitionSpeed ease;
+        width: 1em;
+        height: 1em;
+    }
+
+    // Input para JavaScript, no se ve, su funcionalidad es recoger la imagen del ordenador por aquí
+    input{
+        display: none;
+    }
+
+    &:hover {
+
+        cursor: pointer;
+
+        .user-avatar {
+            opacity: 0.5;
+        }
+
+        .edit-icon {
+            opacity: 1;
+        }
+
+    }
+
+}
+
+/** Media Queries para Elementos Generales (Comunes) **/
+
+@include respond-to('pantallaGrande') {
+}
+
+@include respond-to('pantallaEstandar') {
+}
+
+@include respond-to('pantallaPequena') {
+}
+
+@include respond-to('tableta') {
+
+    header{
+
+        height: 5em;
+
+        h1{
+            display: none;
+        }
+
+    }
+
+    footer{
+        position: relative;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .header-derecho{
+        gap: 1em;
+    }
+
+    .texto-usuario{
+        .medallas-usuario{
+            display: none;
+        }
+        p{
+            margin: 0;
+        }
+    }
+
+    #passwordNotLongEnough,
+    #userAlreadyRegistered,
+    #changedData {    
+        font-size: 1.2em;
+    }
+
+}
+
+@include respond-to('movil') {
+
+    header, main {
+        overflow: scroll;
+    }
+
+    .header-derecho{
+        
+        margin-right: 1em;
+
+        .texto-usuario{
+            display: none;
+        }
+
+        img:nth-child(1){
+            margin-left: 2em;
+        }
+
+    }
+
+    .contenido-ventana{
+        position: inherit;
+        transform: scale(0.8);
+        gap: 50%;
+        width: 120%;
+    }
+
+    .informacion-usuario{
+        margin: 1em;
+    }
+
+    button, input{
+        overflow: hidden;
+    }
+
+    #passwordNotLongEnough,
+    #userAlreadyRegistered,
+    #changedData {    
+        font-size: 1em;
+    }
+
+}

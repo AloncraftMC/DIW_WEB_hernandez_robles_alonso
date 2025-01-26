@@ -63,7 +63,7 @@ main {
   display: flex;
   justify-content: center;
   gap: 2vw;
-  padding: calc(1vw + 1.5vh);
+  padding: 2em;
   background-color: rgba(145, 226, 255, 0.5);
   border-radius: 4vh;
 }
@@ -71,8 +71,8 @@ main {
   font-size: calc(0.5vw + 3vh);
 }
 
-/* Botón genérico */
-.boton {
+/* Botón base */
+.boton-base, .boton {
   font-family: "Rubik Light", sans-serif;
   font-size: 2vw;
   padding-top: 2.25vh;
@@ -86,10 +86,12 @@ main {
   outline: none;
   box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.5);
 }
-.boton:hover {
+.boton-base:hover, .boton:hover {
   filter: brightness(0.75);
 }
 
+/* Botón genérico - Herencia */
+/* Botones de colores - Interpolación */
 .boton-blanco {
   background-color: white;
   color: black;
@@ -238,7 +240,6 @@ main {
   .botones {
     flex-direction: column;
     gap: 1.5vh;
-    padding: calc(1vw + 1vh);
     transform: scale(0.7);
   }
   .boton {

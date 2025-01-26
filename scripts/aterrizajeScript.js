@@ -3,7 +3,7 @@ import {
     setUsers, 
     getCurrentUser, 
     setCurrentUser,
-    animacionVentana 
+    animacionVentana
 } from './userFunctions.js';
 
 // Redirección a "editor.html" si hay una sesión iniciada

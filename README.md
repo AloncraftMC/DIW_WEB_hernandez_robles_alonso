@@ -1,6 +1,6 @@
 # Goal Tracker
 
-> [CAUTION]
+> [!CAUTION]
 > **Parcel** no funciona, así que para ver funcionar la web, es recomendable usar `live-server`, instalable en **Node.js** con `npm install live-server`.
 
 ## Índice de Contenidos

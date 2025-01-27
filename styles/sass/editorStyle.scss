@@ -162,7 +162,7 @@ main {
 
 @include respond-to('tableta') {
 
-    .nombre-usuario{
+    .texto-usuario{
         display: none;
     }
 

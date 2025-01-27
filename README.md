@@ -1,5 +1,8 @@
 # Goal Tracker
 
+> [CAUTION]
+> **Parcel** no funciona, así que para ver funcionar la web, es recomendable usar `live-server`, instalable en **Node.js** con `npm install live-server`.
+
 ## Índice de Contenidos
 
 - [Tarea 10 - Preparando Imágenes para Reactividad](#tarea-10---preparando-imágenes-para-reactividad)

@@ -3,7 +3,7 @@
 ## Acerca de Tarea 12 - Sitio Web Completo
 
 > [!CAUTION]
-> **Parcel** no ha empaquetado los recursos correctamente ya que los métodos asociados a los botones de la interfaz pierden el ámbito y no se reconocen por el navegador, así que para ver funcionar la web, es recomendable o bien usar la propia página alojada en GitHub Pages ([![](https://raw.githubusercontent.com/AloncraftMC/DIW_WEB_hernandez_robles_alonso/refs/heads/main/docmedia/images/Tarea%2012/link.svg)](https://aloncraftmc.github.io/DIW_WEB_hernandez_robles_alonso/)) o bien `live-server`, instalable en **Node.js** con `npm install live-server`.
+> **Parcel** no ha empaquetado los recursos correctamente ya que los métodos asociados a los botones de la interfaz pierden el ámbito y no se reconocen por el navegador, así que para ver funcionar la web, es recomendable o bien usar la propia página alojada en GitHub Pages ([![](https://raw.githubusercontent.com/AloncraftMC/DIW_WEB_hernandez_robles_alonso/refs/heads/main/docmedia/images/Tarea%2012/link.svg)](https://aloncraftmc.github.io/DIW_WEB_hernandez_robles_alonso/)) o bien localmente con `live-server`, instalable en **Node.js** con `npm install live-server`.
 
 ## Índice de Contenidos
 

@@ -1,7 +1,7 @@
 # Goal Tracker
 
+> <h1 style="color: red">Acerca de Tarea 12</h1>
 > [!CAUTION]
-> # Acerca de Tarea 12
 > **Parcel** no ha empaquetado los recursos correctamente ya que los métodos asociados a los botones de la interfaz pierden el ámbito y no se reconocen por el navegador, así que para ver funcionar la web, es recomendable usar `live-server`, instalable en **Node.js** con `npm install live-server`.
 
 ## Índice de Contenidos

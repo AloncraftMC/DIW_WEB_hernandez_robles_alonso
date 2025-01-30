@@ -1,0 +1,203 @@
+// Importaciones de módulos
+@import 'generalStyle';
+
+body{
+    background-color: #01203c;
+}
+
+/* Contenedor dentro del main con todo el contenido de importancia */
+.contenedor-contacto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/* Secciones del mapa y el formulario */
+.seccion-mapa, .seccion-formulario{
+    
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+
+    // Sus títulos
+    h1{
+        font-size: 1.5em;
+        font-family: $rubikLight;
+    }
+
+}
+
+/* El mapa */
+iframe{
+    height: 30rem;
+    border: 0.4vw solid black;
+    border-radius: 2vw;
+}
+
+/* El formulario de envío del correo */
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* La región de los inputs del formulario */
+.inputs-formulario{
+
+    border-radius: 2vw;
+    border: 0.4vw solid black;
+    background-color: $azulTransparente;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+
+    // Campos
+    input, textarea{
+        overflow: auto;
+        font-family: $rubikLight;
+        padding: 3%;
+        font-size: 1.5rem;
+        margin: 0.6rem;
+        border-radius: 1rem;
+        border: 0.1em solid black;
+        background-color: $azulTransparenteClaro;
+        resize: vertical;
+    }
+
+    textarea{
+        height: 15rem;
+        min-height: 10rem;
+        max-height: 30rem;
+        border-radius: 1rem 1rem 4rem 1rem;
+    }
+
+}
+
+/* Sección para contener botón del correo */
+.contenedor-boton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* Botón de enviar */
+.boton-enviar{
+
+    border: 0.15em solid black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    border-radius: 1vw;
+    font-family: $rubikLight;
+    font-size: 1.5rem;
+    height: 4rem;
+    width: 8rem;
+    transition: filter $transitionSpeed;
+
+    &:hover{
+        cursor: pointer;
+        filter: brightness(0.75);
+    }
+
+}
+
+main{
+    background-image:
+        url('/media/images/avif/contactoFondo3200.avif'),
+        url('/media/images/webp/contactoFondo3200.webp'),
+        url('/media/images/jpg/contactoFondo3200.jpg');
+}
+
+@include respond-to('pantallaGrande') {
+    main {
+        background-image: 
+        url('/media/images/avif/contactoFondo2560.avif'),
+        url('/media/images/webp/contactoFondo2560.webp'),
+        url('/media/images/jpg/contactoFondo2560.jpg');
+    }
+}
+
+@include respond-to('pantallaEstandar') {
+    main {
+        background-image: 
+        url('/media/images/avif/contactoFondo1920.avif'),
+        url('/media/images/webp/contactoFondo1920.webp'),
+        url('/media/images/jpg/contactoFondo1920.jpg');
+    }
+}
+
+@include respond-to('pantallaPequena') {
+
+    main {
+        background-image: 
+        url('/media/images/avif/contactoFondo1200.avif'),
+        url('/media/images/webp/contactoFondo1200.webp'),
+        url('/media/images/jpg/contactoFondo1200.jpg');
+    }
+
+    .contenedor-contacto {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .seccion-mapa{
+        width: 80%;
+    }
+
+    .seccion-formulario{
+        width: 40em;
+        margin-bottom: 7em;
+    }
+
+}
+
+@include respond-to('tableta') {
+
+    main {
+        background-image: 
+        url('/media/images/avif/contactoFondo768.avif'),
+        url('/media/images/webp/contactoFondo768.webp'),
+        url('/media/images/jpg/contactoFondo768.jpg');
+    }
+
+    .seccion-formulario{
+        width: 30em;
+        margin-bottom: 10em;
+    }
+
+    .boton-enviar{
+        border-radius: 1rem;
+    }
+
+}
+
+@include respond-to('movil') {
+
+    main {
+        background-image: 
+        url('/media/images/avif/contactoFondo480.avif'),
+        url('/media/images/webp/contactoFondo480.webp'),
+        url('/media/images/jpg/contactoFondo480.jpg');
+    }
+
+    .seccion-mapa{
+        width: 100vw;
+    }
+
+    iframe{
+        border: 0px;
+        border-radius: 0px;
+    }
+
+    .seccion-formulario{
+        width: 100vw;
+    }
+
+    .inputs-formulario{
+        border: 0px;
+        border-radius: 0;
+    }
+
+}

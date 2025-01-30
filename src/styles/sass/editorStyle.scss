@@ -1,0 +1,237 @@
+// Importaciones de módulos
+@import 'generalStyle';
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #adc0c7;
+}
+
+header{
+    z-index: 1;
+}
+
+.header-izquierdo{
+
+    a{
+
+        p{
+            display: block;
+            margin: 0;
+        }
+
+        img{
+            display: none;
+            width: 1.5em;
+        }
+
+    }
+
+}
+
+/* Dentro del header izquierdo, la región con el botón de "crear..." y su menú desplegable */
+.contenedor-crear {
+
+    position: relative;
+
+    // El botón de "Crear..."
+    .boton-crear {
+
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+        background-color: $azulClaro;
+        padding: 0.5rem 1rem;
+        border: 0px;
+        border-radius: 0.7em;
+        color: black;
+        font-family: $rubikRegular;
+        transition: filter $transitionSpeed;
+        font-size: 1em;
+        cursor: pointer;
+
+        &:hover {
+            filter: brightness(0.75);
+        }
+
+        // Cambiar de color a azul medio si el menú está desplegado
+        &.activo {
+            background-color: $azulMedio;
+        }
+
+        // Icono SVG de añadir +
+        img {
+            width: 1rem;
+            transform: translate(10%, -5%) scale(1.2);
+        }
+
+        p{
+            margin: 0;
+        }
+
+    }
+
+    // El desplegable con las opciones
+    .opciones-crear {
+
+        position: absolute;
+        top: 120%;
+        left: 0;
+        width: 13em;
+        background-color: $azulClaro;
+        border-radius: 0.7em;
+        padding: 0.5rem;
+        box-shadow: $buttonShadow;
+        flex-direction: column;
+        z-index: 10;
+
+        // Cada elemento
+        p {
+
+            margin-top: 0.2em;
+            margin-bottom: 0.2em;
+            display: flex;
+            border-radius: 0.5em;
+            padding: 0.25em;
+            align-items: center;
+            font-family: $rubikRegular;
+            cursor: pointer;
+            transition: background-color $transitionSpeed;
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.25);
+            }
+
+            // Icono SVG
+            img {
+                width: 1rem;
+                margin-right: 0.3em;
+            }
+
+            // Círculo (es un poco más pequeño)
+            .mas-pequeno{
+                transform: scale(0.75);
+            }
+
+        }
+
+        .barra-divisoria {
+            border-top: 2px solid rgba(0, 0, 0, 0.5);
+            margin: 0.5rem 0;
+        }
+
+    }
+
+}
+
+/* Clase para alternar la visibilidad dinámicamente del desplegable con JS */
+.oculto{
+    display: none;
+}
+
+main {
+
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #adc0c7;
+    color: black;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    // Título de la página en el main
+    h1{
+        font-size: 2rem;
+    }
+
+}
+
+/* Sección que aparece cuando el editor está vacío (con funcionalidad, no se vería siempre) */
+.editor-vacio{
+
+    font-family: $rubikLight;
+    color: white;
+    filter: brightness(2) invert(1) opacity(0.33);
+    cursor: pointer;
+
+    img{
+        width: 10em;
+        height: 10em;
+    }
+
+}
+
+@include respond-to('pantallaGrande') {
+}
+
+@include respond-to('pantallaEstandar') {
+}
+
+@include respond-to('pantallaPequena') {
+
+    header{
+        
+        min-height: 5rem;
+
+        h1{
+            display: none;
+        }
+
+    }
+
+}
+
+@include respond-to('tableta') {
+
+    .texto-usuario{
+        display: none;
+    }
+
+    .header-izquierdo{
+        gap: 0.5em;
+    }
+
+}
+
+@include respond-to('movil') {
+
+    header{
+        overflow: visible;
+    }
+
+    .header-izquierdo{
+
+        a{
+
+            p{
+                display: none;
+            }
+
+            img{
+                display: block;
+            }
+
+        }
+
+    }
+
+    .boton-crear{
+
+        p{
+            display: none;
+        }
+
+        img {
+            width: 1.5em !important;
+            margin-right: 0.3em;
+        }
+
+    }
+
+}

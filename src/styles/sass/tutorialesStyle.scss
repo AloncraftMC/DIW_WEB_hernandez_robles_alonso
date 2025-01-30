@@ -1,0 +1,169 @@
+// Importaciones de módulos
+@import 'generalStyle';
+
+body{
+    background-color: #000617;
+}
+
+main{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image:
+        url('/media/images/avif/tutorialesFondo3200.avif'),
+        url('/media/images/webp/tutorialesFondo3200.webp'),
+        url('/media/images/jpg/tutorialesFondo3200.jpg');
+}
+
+/* El contenedor del contenido de la página en el main */
+.contenedor-tutoriales {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 12%;
+}
+
+/* Contenedor con un tutorial */
+.contenedor-tutorial{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+
+    // La imagen
+    img{
+        border-radius: 3rem;
+        border: 0.4em solid black;
+        width: 20rem;
+    }
+
+    // Contenedor con el texto del tutorial
+    .contenedor-texto{
+
+        width: 40vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        // El título del tutorial
+        h2{
+            font-family: $rubikRegular;
+        }
+
+        // Los párrafos en lista
+        ul{
+
+            font-family: $rubikLight;
+            text-align: justify;
+
+            li{
+
+                padding: 1rem;
+                font-size: 120%;
+            
+                // Los pequeños SVGs en medio del texto
+                img{
+                    border: 0px;
+                    width: 1rem;
+                    height: 1rem;
+                    filter: invert(1) brightness(10);
+                }
+            
+            }
+
+        }
+
+    }
+
+}
+
+/* Barra generada con estilos sólo para separar los tutoriales */
+.barra-divisora {
+    opacity: 0.2;
+    background-color: white;
+    border-radius: 100em;
+    padding: 0.25em;
+    margin: 4em;
+    width: 80vw;
+}
+
+@include respond-to('pantallaGrande') {
+    main {
+        background-image: 
+        url('/media/images/avif/tutorialesFondo2560.avif'),
+        url('/media/images/webp/tutorialesFondo2560.webp'),
+        url('/media/images/jpg/tutorialesFondo2560.jpg');
+    }
+}
+
+@include respond-to('pantallaEstandar') {
+    main {
+        background-image: 
+        url('/media/images/avif/tutorialesFondo1920.avif'),
+        url('/media/images/webp/tutorialesFondo1920.webp'),
+        url('/media/images/jpg/tutorialesFondo1920.jpg');
+    }
+}
+
+@include respond-to('pantallaPequena') {
+    main {
+        background-image: 
+        url('/media/images/avif/tutorialesFondo1200.avif'),
+        url('/media/images/webp/tutorialesFondo1200.webp'),
+        url('/media/images/jpg/tutorialesFondo1200.jpg');
+    }
+}
+
+@include respond-to('tableta') {
+
+    main {
+        background-image: 
+        url('/media/images/avif/tutorialesFondo768.avif'),
+        url('/media/images/webp/tutorialesFondo768.webp'),
+        url('/media/images/jpg/tutorialesFondo768.jpg');
+    }
+
+    .contenedor-tutorial{
+
+        flex-direction: column;
+
+        .contenedor-texto{
+            width: 80vw;
+        }
+
+    }
+
+}
+
+@include respond-to('movil') {
+
+    main {
+        background-image: 
+        url('/media/images/avif/tutorialesFondo480.avif'),
+        url('/media/images/webp/tutorialesFondo480.webp'),
+        url('/media/images/jpg/tutorialesFondo480.jpg');
+    }
+
+    .contenedor-tutorial{
+        
+        img{
+            border: 0px;
+            border-radius: 0px;
+            width: 100vw;
+            height: auto;
+        }
+
+        .contenedor-texto{
+            width: 80vw;
+        }
+        
+    }
+
+    li{
+        text-align: left;
+    }
+
+}

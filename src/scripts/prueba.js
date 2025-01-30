@@ -1,0 +1,1 @@
+console.log("%cÉXITO", "font-size: 100px; color: rgb(0,255,0)");

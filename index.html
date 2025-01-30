@@ -5,15 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Goal Tracker - Landing Page</title>
-    <link rel="stylesheet" href="./styles/css/aterrizajeStyle.css" type="text/css">
-    <link rel="icon" href="./media/favicons/favicon.ico" type="image/x-icon">
-
-    <script type="module" src="./scripts/aterrizajeScript.js"></script>
-    <script>
-        function esperar(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-    </script>
+    <link rel="stylesheet" href="src/styles/css/aterrizajeStyle.css" type="text/css">
+    <link rel="icon" href="public/media/favicons/favicon.ico" type="image/x-icon">
+    
+    <script type="module" src="src/scripts/prueba.js"></script>
+    <script type="module" src="src/scripts/aterrizajeScript.js"></script>
 
 </head>
 <body>
@@ -24,15 +20,15 @@
         <p class="subtitulo-crea-gestiona">Crea y gestiona<br>tus propios objetivos</p>
         
         <div class="botones">
-            <button class="boton boton-blanco" onclick="openLoginWindow()">Iniciar Sesión</button>
-            <button class="boton boton-azul" onclick="openRegisterWindow()">Registrarse</button>
+            <button class="boton boton-blanco" id="openLoginWindowEvent">Iniciar Sesión</button>
+            <button class="boton boton-azul" id="openRegisterWindowEvent">Registrarse</button>
         </div>
         
     </main>
 
     <div class="ventana-login" id="loginWindow">
         
-        <form class="contenido-ventana" onsubmit="event.preventDefault(); login();">
+        <form class="contenido-ventana" onsubmit="event.preventDefault();">
 
             <p class="titulo-ventana">Iniciar Sesión</p>
 
@@ -46,7 +42,7 @@
             <p id="incorrectPassword">La contraseña es incorrecta.</p>
 
             <div class="botones-ventana">
-                <input type="submit" class="boton boton-azul" value="Entrar">
+                <input type="submit" class="boton boton-azul" value="Entrar" id="loginEvent">
             </div>
 
         </form>
@@ -55,7 +51,7 @@
 
     <div class="ventana-registro" id="registerWindow">
 
-        <form class="contenido-ventana" onsubmit="event.preventDefault(); register();">
+        <form class="contenido-ventana" onsubmit="event.preventDefault();">
 
             <p class="titulo-ventana">Registrarse</p>
 
@@ -73,7 +69,7 @@
             <p id="userAlreadyRegistered">Este usuario ya se encuentra registrado.</p>
 
             <div class="botones-ventana">
-                <input type="submit" class="boton boton-azul" value="Registrarse">
+                <input type="submit" class="boton boton-azul" value="Registrarse" id="registerEvent">
             </div>
 
         </form>

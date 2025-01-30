@@ -2,7 +2,7 @@
 
 ## Intentar Solucionar Vite
 
-> [!CAUTION]
+> !!! caution "Título de advertencia"
 > Para intentar solucionar el problema con los empaquetadores, sólo se me ocurre hacerlo con Vite, porque da el error más "trivial" bajo mi punto de vista.
 > 
 > Para poner las cosas en orden y se entiendan, yo tengo 4 páginas HTML, situadas en:
@@ -43,6 +43,7 @@
 > **Cosas probadas**: He probado a cambiar de sitio `src/pages/`, sus archivos internos, renombrar carpetas o incluso traer el contenido de `src/` a la raíz, pero nada funciona en modo de producción. También he probado a poner todas las rutas absolutas en todos los archivos a partir de la raíz del proyecto. Nada ha funcionado.
 >
 > Finalmente, he añadido un script linkeado a todos los HTMLs que imprime un `console.log` con un mensaje de éxito en grande.
+> 
 > ![alt text](docmedia/images/Tarea%2012/image.png)
 
 ## Índice de Contenidos

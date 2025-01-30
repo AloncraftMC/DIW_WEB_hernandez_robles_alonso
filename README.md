@@ -2,7 +2,7 @@
 
 ## Intentar Solucionar Vite
 
-> [!IMPORTANT](LAL)
+> [!IMPORTANT]
 > Para intentar solucionar el problema con los empaquetadores, sólo se me ocurre hacerlo con Vite, porque da el error más "trivial" bajo mi punto de vista.
 > 
 > Para poner las cosas en orden y se entiendan, yo tengo 4 páginas HTML, situadas en:

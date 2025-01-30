@@ -15,12 +15,15 @@
 > Todas ellas hacen uso de rutas relativas para referenciar a los estilos, scripts, páginas y recursos.
 > 
 > Mis estilos se encuentran en la carpeta `src/styles/css/`.
+>
 > Mis scripts se encuentran en la carpeta `src/scripts/`.
+>
 > Mis recursos se encontran en la carpeta `public/media/` (ya que Vite conservará tal cual los archivos que se encuentren en `public/`. Aquí se deben meter archivos estáticos inmutables del proyecto, como lo son los imágenes y en definitiva los recursos.).
 >
 > Tengo declarados dos scripts para Vite (y un tercero sin tanta importancia que sólo sirve para compilar: `build`. En la práctica uso `preview`) en [`package.json`](package.json), que se ejecutan con `npm run dev` (vista de desarrollo) y `npm run preview` (compilación + vista de producción).
 >
 > Una vez especificado la estructura de ficheros del proyecto y los comandos, detallaré el problema:
+>
 > - He leído que Vite usa métodos distintos para sus comandos de desarrollo [mi script `dev`] y compilación (producción) [mi script `preview`] cuando tiene que construir las rutas que se encuentra en los ficheros HTML, CSS y JavaScript.
 > - Mi página es completamente funcional en modo desarrollo (`npm run dev`). Pero en modo de producción, al compilar (`npm run preview`), ocurre el problema.
 > - Si abro la página compilada, la página de aterrizaje (`index.html`) se carga de manera completamente funcional (recursos, estilos y scripts). Esto significa que `index.html` ha sido empaquetado BIEN y sus URLs han sido transformadas en el modo correcto.

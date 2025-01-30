@@ -1,9 +1,49 @@
 # Goal Tracker
 
-## Acerca de Tarea 12 - Sitio Web Completo
+## Intentar Solucionar Vite
 
 > [!CAUTION]
-> **Parcel** no ha empaquetado los recursos correctamente ya que los métodos asociados a los botones de la interfaz pierden el ámbito y no se reconocen por el navegador, así que para ver funcionar la web, es recomendable o bien usar la propia página alojada en GitHub Pages ([![](https://raw.githubusercontent.com/AloncraftMC/DIW_WEB_hernandez_robles_alonso/refs/heads/main/docmedia/images/Tarea%2012/link.svg)](https://aloncraftmc.github.io/DIW_WEB_hernandez_robles_alonso/)) o bien localmente con `live-server`, instalable en **Node.js** con `npm install live-server`.
+> Para intentar solucionar el problema con los empaquetadores, sólo se me ocurre hacerlo con Vite, porque da el error más "trivial" bajo mi punto de vista.
+> 
+> Para poner las cosas en orden y se entiendan, yo tengo 4 páginas HTML, situadas en:
+> 
+> - `index.html`
+> - `src/pages/contacto.html`
+> - `src/pages/editor.html`
+> - `src/pages/tutoriales.html`
+>
+> Todas ellas hacen uso de rutas relativas para referenciar a los estilos, scripts, páginas y recursos.
+> 
+> Mis estilos se encuentran en la carpeta `src/styles/css/`.
+> Mis scripts se encuentran en la carpeta `src/scripts/`.
+> Mis recursos se encontran en la carpeta `public/media/` (ya que Vite conservará tal cual los archivos que se encuentren en `public/`. Aquí se deben meter archivos estáticos inmutables del proyecto, como lo son los imágenes y en definitiva los recursos.).
+>
+> Tengo declarados dos scripts para Vite (y un tercero sin tanta importancia que sólo sirve para compilar: `build`. En la práctica uso `preview`) en [`package.json`](package.json), que se ejecutan con `npm run dev` (vista de desarrollo) y `npm run preview` (compilación + vista de producción).
+>
+> Una vez especificado la estructura de ficheros del proyecto y los comandos, detallaré el problema:
+> - He leído que Vite usa métodos distintos para sus comandos de desarrollo [mi script `dev`] y compilación (producción) [mi script `preview`] cuando tiene que construir las rutas que se encuentra en los ficheros HTML, CSS y JavaScript.
+> - Mi página es completamente funcional en modo desarrollo (`npm run dev`). Pero en modo de producción, al compilar (`npm run preview`), ocurre el problema.
+> - Si abro la página compilada, la página de aterrizaje (`index.html`) se carga de manera completamente funcional (recursos, estilos y scripts). Esto significa que `index.html` ha sido empaquetado BIEN y sus URLs han sido transformadas en el modo correcto.
+> - Pero en cuanto inicio sesión, me debe redirigir a `editor.html`. Sin embargo, me redirige a un `.html` generado por Vite que, por algún motivo, en su `<head>` se puede apreciar que las etiquetas `<link>`, `<script>` y creo que otras de los recursos como `<img>` han conservado la URL relativa de los recursos como si todavía se estuviera en modo de desarrollo (sin compilar, transpilar o empaquetar). Creo que esto pasa o se podría solucionar encontrando la URL relativa correcta para los archivos CSS, JS y demás, pero he probado miles de rutas y no lo he conseguido.
+> - Muchos recursos como imágenes y algunos scripts y estilos sí se transforman y aparecen en `dist/` (carpeta de producción/distribución), pero no todos y de la manera correcta.
+>
+> En definitiva, para que pueda probar correctamente lo que le digo, pruebe a ejecutar:
+> ```bash
+> npm run dev   # Para desarrollo (debería funcionar completamente)
+> ```
+> y para generar la carpeta de distribución (`dist/`):
+> ```bash
+> npm run preview   # Para producción; compilación y su visualización (lo que no es el index.html no funciona)
+> ```
+> 
+> y también saber que tengo la hipótesis de que si, para empezar con una solución parcial rápida de prueba, Vite consiguiera enlazar a la página del editor su estilo (ya que esta es la primera que no funciona), esto significaría que habríamos encontrado la solución, en caso de que el problema venga de poner mal URLs.
+> 
+> Si el problema se trata de algo más generalizado como la composición interna del código del proyecto o algo así, ya sí que es verdad que no tengo ni idea. La cosa apunta a que es problema, como he dicho y parece, de URLs. Pero no puedo asegurarlo, ya que por otro lado parece que es algo más generalizado porque nada que no sea `index.html` funciona.
+>
+> **Cosas probadas**: He probado a cambiar de sitio `src/pages/`, sus archivos internos, renombrar carpetas o incluso traer el contenido de `src/` a la raíz, pero nada funciona en modo de producción. También he probado a poner todas las rutas absolutas en todos los archivos a partir de la raíz del proyecto. Nada ha funcionado.
+>
+> Finalmente, he añadido un script linkeado a todos los HTMLs que imprime un `console.log` con un mensaje de éxito en grande.
+> ![alt text](docmedia/images/Tarea%2012/image.png)
 
 ## Índice de Contenidos
 

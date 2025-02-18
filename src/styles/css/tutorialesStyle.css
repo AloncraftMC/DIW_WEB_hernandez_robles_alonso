@@ -1,19 +1,19 @@
 @charset "UTF-8";
 @font-face {
   font-family: "Rubik Light";
-  src: url("../../../public/media/fonts/Rubik-Light.ttf") format("truetype");
+  src: url("../../media/fonts/Rubik-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: "Rubik Regular";
-  src: url("../../../public/media/fonts/Rubik-Regular.ttf") format("truetype");
+  src: url("../../media/fonts/Rubik-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Rubik Medium";
-  src: url("../../../public/media/fonts/Rubik-Medium.ttf") format("truetype");
+  src: url("../../media/fonts/Rubik-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
@@ -446,7 +446,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url("../../../public/media/images/avif/tutorialesFondo3200.avif"), url("../../../public/media/images/webp/tutorialesFondo3200.webp"), url("../../../public/media/images/jpg/tutorialesFondo3200.jpg");
+  background-image: url("../../media/images/avif/tutorialesFondo3200.avif"), url("../../media/images/webp/tutorialesFondo3200.webp"), url("../../media/images/jpg/tutorialesFondo3200.jpg");
 }
 
 /* El contenedor del contenido de la página en el main */
@@ -505,22 +505,22 @@ main {
 
 @media (max-width: 2560px) {
   main {
-    background-image: url("../../../public/media/images/avif/tutorialesFondo2560.avif"), url("../../../public/media/images/webp/tutorialesFondo2560.webp"), url("../../../public/media/images/jpg/tutorialesFondo2560.jpg");
+    background-image: url("../../media/images/avif/tutorialesFondo2560.avif"), url("../../media/images/webp/tutorialesFondo2560.webp"), url("../../media/images/jpg/tutorialesFondo2560.jpg");
   }
 }
 @media (max-width: 1920px) {
   main {
-    background-image: url("../../../public/media/images/avif/tutorialesFondo1920.avif"), url("../../../public/media/images/webp/tutorialesFondo1920.webp"), url("../../../public/media/images/jpg/tutorialesFondo1920.jpg");
+    background-image: url("../../media/images/avif/tutorialesFondo1920.avif"), url("../../media/images/webp/tutorialesFondo1920.webp"), url("../../media/images/jpg/tutorialesFondo1920.jpg");
   }
 }
 @media (max-width: 1200px) {
   main {
-    background-image: url("../../../public/media/images/avif/tutorialesFondo1200.avif"), url("../../../public/media/images/webp/tutorialesFondo1200.webp"), url("../../../public/media/images/jpg/tutorialesFondo1200.jpg");
+    background-image: url("../../media/images/avif/tutorialesFondo1200.avif"), url("../../media/images/webp/tutorialesFondo1200.webp"), url("../../media/images/jpg/tutorialesFondo1200.jpg");
   }
 }
 @media (max-width: 768px) {
   main {
-    background-image: url("../../../public/media/images/avif/tutorialesFondo768.avif"), url("../../../public/media/images/webp/tutorialesFondo768.webp"), url("../../../public/media/images/jpg/tutorialesFondo768.jpg");
+    background-image: url("../../media/images/avif/tutorialesFondo768.avif"), url("../../media/images/webp/tutorialesFondo768.webp"), url("../../media/images/jpg/tutorialesFondo768.jpg");
   }
   .contenedor-tutorial {
     flex-direction: column;
@@ -531,7 +531,7 @@ main {
 }
 @media (max-width: 480px) {
   main {
-    background-image: url("../../../public/media/images/avif/tutorialesFondo480.avif"), url("../../../public/media/images/webp/tutorialesFondo480.webp"), url("../../../public/media/images/jpg/tutorialesFondo480.jpg");
+    background-image: url("../../media/images/avif/tutorialesFondo480.avif"), url("../../media/images/webp/tutorialesFondo480.webp"), url("../../media/images/jpg/tutorialesFondo480.jpg");
   }
   .contenedor-tutorial img {
     border: 0px;

@@ -1,7 +1,7 @@
 {
   "name": "web-goal-tracker",
   "version": "1.0.0",
-  "description": "> [!CAUTION]\r > **Parcel** no ha empaquetado los recursos correctamente ya que los métodos asociados a los botones de la interfaz pierden el ámbito y no se reconocen por el navegador, así que para ver funcionar la web, es recomendable o bien usar la propia página alojada en GitHub Pages ([![](https://raw.githubusercontent.com/AloncraftMC/DIW_WEB_hernandez_robles_alonso/refs/heads/main/docmedia/images/Tarea%2012/link.svg)](https://aloncraftmc.github.io/DIW_WEB_hernandez_robles_alonso/)) o bien localmente con `live-server`, instalable en **Node.js** con `npm install live-server`.",
+  "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite",
@@ -10,7 +10,30 @@
     "webpack-build": "webpack",
     "webpack-start": "webpack serve --open",
     "parcel-dev": "parcel index.html",
-    "parcel-build": "parcel build index.html"
+    "parcel-build": "parcel build index.html",
+    "prefix-css-aterrizaje": "postcss src/styles/aterrizajeStyle.css --use autoprefixer -o dist/styles/aterrizajeStyle.prefixed.css",
+    "minify-css-aterrizaje": "cleancss -o dist/styles/aterrizajeStyle.min.css dist/styles/aterrizajeStyle.prefixed.css",
+    "all-css-aterrizaje": "npm-run-all prefix-css-aterrizaje minify-css-aterrizaje",
+    "prefix-css-contacto": "postcss src/styles/contactoStyle.css --use autoprefixer -o dist/styles/contactoStyle.prefixed.css",
+    "minify-css-contacto": "cleancss -o dist/styles/contactoStyle.min.css dist/styles/contactoStyle.prefixed.css",
+    "all-css-contacto": "npm-run-all prefix-css-contacto minify-css-contacto",
+    "prefix-css-editor": "postcss src/styles/editorStyle.css --use autoprefixer -o dist/styles/editorStyle.prefixed.css",
+    "minify-css-editor": "cleancss -o dist/styles/editorStyle.min.css dist/styles/editorStyle.prefixed.css",
+    "all-css-editor": "npm-run-all prefix-css-editor minify-css-editor",
+    "prefix-css-tutoriales": "postcss src/styles/tutorialesStyle.css --use autoprefixer -o dist/styles/tutorialesStyle.prefixed.css",
+    "minify-css-tutoriales": "cleancss -o dist/styles/tutorialesStyle.min.css dist/styles/tutorialesStyle.prefixed.css",
+    "all-css-tutoriales": "npm-run-all prefix-css-tutoriales minify-css-tutoriales",
+    "start": "parcel src/index.html --dist-dir dist",
+    "clean": "rimraf dist",
+    "serve": "npm-run-all clean build start",
+    "dev:parcel": "parcel src/index.html src/pages/*.html --dist-dir dev",
+    "build:parcel": "parcel build src/index.html src/pages/*.html --dist-dir build",
+    "limpia:dev": "rimraf dev .parcel-cache",
+    "limpia:build": "rimraf build .parcel-cache",
+    "copiarDev:media": "timeout /t 3 && if not exist dev\\src\\media mkdir dev\\src\\media && xcopy /E /I src\\media dev\\src\\media",
+    "copiarBuild:media": "timeout /t 3 && if not exist build\\src\\media mkdir build\\src\\media && xcopy /E /I src\\media build\\src\\media",
+    "dev:todo": "run-s limpia:dev && run-p dev:parcel copiarDev:media",
+    "build:todo": "run-s limpia:build && run-p build:parcel copiarBuild:media"
   },
   "repository": {
     "type": "git",
@@ -31,8 +54,11 @@
     "css-loader": "^7.1.2",
     "html-webpack-plugin": "^5.6.3",
     "mini-css-extract-plugin": "^2.9.2",
+    "npm-run-all": "^4.1.5",
     "parcel": "^2.13.3",
-    "postcss": "^8.5.1",
+    "postcss": "^8.5.2",
+    "rimraf": "^6.0.1",
+    "sass": "^1.85.0",
     "style-loader": "^4.0.0",
     "svgo": "^3.3.2",
     "vite": "^6.0.11",
@@ -41,6 +67,9 @@
     "webpack-dev-server": "^5.2.0"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.7.2"
+    "@fortawesome/fontawesome-free": "^6.7.2",
+    "clean-css-cli": "^5.6.3",
+    "mkdirp": "^3.0.1",
+    "postcss-cli": "^11.0.0"
   }
 }

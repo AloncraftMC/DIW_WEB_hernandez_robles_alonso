@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor - Goal Tracker</title>
+    <link rel="stylesheet" href="/pages/editor.c1cc01ce.css" type="text/css">
+    <link rel="icon" href="/favicon.7a64f7a4.ico" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <script src="/pages/contacto.aa60024c.js" defer=""></script>
+    <script src="/pages/editor.f6cf9027.js" defer=""></script>
+
+</head>
+<body>
+    
+    <header>
+
+        <section class="header-izquierdo">
+
+            <h1>GOAL TRACKER</h1>
+
+            <section class="contenedor-crear">
+
+                <button id="createButton" class="boton-crear">
+                    <img src="/añadirCirculo.b800f205.svg" alt="Crear">
+                    <p>Crear...</p>
+                </button>
+
+                <section id="createOptions" class="opciones-crear oculto">
+
+                    <p id="createMedal">
+                        <img src="/estrella.a89fe82f.svg" alt="Medalla">
+                        Medalla
+                    </p>
+                    <p id="createMedalFolder">
+                        <img src="/estrella.a89fe82f.svg" alt="Carpeta de Medallas">
+                        Carpeta de Medallas
+                    </p>
+
+                    <div class="barra-divisoria"></div>
+
+                    <p id="createObjective">
+                        <img src="/circulo.a6ea5f0c.svg" alt="Objetivo" class="mas-pequeno">
+                        Objetivo
+                    </p>
+                    <p id="createObjectiveFolder">
+                        <img src="/circulo.a6ea5f0c.svg" alt="Carpeta de Objetivos" class="mas-pequeno">
+                        Carpeta de Objetivos
+                    </p>
+
+                </section>
+
+            </section>
+
+            <a href="/pages/contacto.html">
+                <p>Contacto</p>
+                <img src="/contacto.3e4befee.svg" alt="Contacto">
+            </a>
+            <a href="/pages/tutoriales.html">
+                <p>Tutoriales</p>
+                <img src="/tutoriales.cf8e3c3b.svg" alt="Tutoriales">
+            </a>
+
+        </section>
+
+        <section class="header-derecho">
+
+            <img src="/configuracion.578db3b9.svg" alt="Configuración" id="openConfigWindowEvent">
+            <img src="/user.a5778ab0.png" id="userAvatar" class="openUserWindowEvent">
+            
+            <section class="texto-usuario">
+                <p class="nombre-usuario" id="userName">Usuario</p>
+                <p class="medallas-usuario">(0/0) Medallas</p>
+            </section>
+
+        </section>
+
+    </header>
+
+    <main>
+
+        <section class="editor-vacio" id="emptyWorkspace">
+            <img src="/añadir.2a40fbdb.svg">
+            <p>Haz clic aquí para crear tu primera medalla...</p>
+        </section>
+
+    </main>
+    
+    <div class="ventana-configuracion" id="configWindow">
+
+        <section class="contenido-ventana">
+
+            <p class="titulo-ventana">Configuración</p>
+
+            <section class="configuracion">
+                <label for="sonido">Efectos de sonido:</label>
+                <input type="checkbox" name="sonido" id="soundCheckbox">
+            </section>
+
+            <div class="botones-ventana">
+                <button class="boton boton-azul confirmar-cambios" id="disposeConfigWindowEvent">Aceptar</button>
+            </div>
+
+        </section>
+        
+    </div>
+
+    <div class="ventana-usuario" id="userWindow">
+        
+        <section class="contenido-ventana" id="windowContent">
+
+            <section class="informacion-usuario">
+
+                <div class="avatar-container">
+
+                    <img src="/user.a5778ab0.png" class="user-avatar" id="userAvatar">
+                    <img src="/editar.8ef59e04.svg" class="edit-icon" id="editIcon">
+                    <input type="file" id="fileInput">
+
+                </div>
+
+                <p class="nombre-usuario" id="userName">Usuario</p>
+                <p class="medallas-usuario">(0/0) Medallas</p>
+
+            </section>
+
+            <section class="campos-usuario">
+
+                <section>
+                    <label for="cambiarNombre">Cambiar nombre de usuario:</label>
+                    <input type="text" name="cambiarNombre" id="changeUsernameInput">
+                </section>
+
+                <section>
+                    <label for="cambiarContrasena">Cambiar contraseña:</label>
+                    <input type="password" name="cambiarContrasena" id="changePasswordInput">
+                </section>
+
+                <section>
+                    <p id="passwordNotLongEnough">La contraseña debe tener 8 caracteres como mínimo.</p>
+                    <p id="userAlreadyRegistered">Este usuario ya se encuentra registrado.</p>
+                    <p id="changedData">
+                        <i class="fa-solid fa-check"></i>
+                        Cambios guardados correctamente.
+                    </p>
+                </section>
+
+            </section>
+
+            <div class="botones-ventana">
+                
+                <button class="boton boton-azul confirmar-cambios" id="confirmChangesEvent">Confirmar cambios</button>
+
+                <input type="submit" class="boton boton-azul" value="Cerrar sesión" id="logoutSessionEvent">
+
+                <button class="boton boton-blanco" id="openConfirmWindowEvent">
+                    <img src="/papelera.0d2e415a.svg">
+                    Borrar cuenta
+                </button>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <div class="ventana-confirmacion" id="confirmWindow">
+
+        <section class="contenido-ventana">
+
+            <p class="titulo-ventana" id="confirmText">¿Estás seguro que quieres borrar?</p>
+
+            <div class="botones-ventana">
+
+                <button class="boton boton-blanco" id="deleteAccountEvent">
+                    <img src="/papelera.0d2e415a.svg">
+                    Borrar
+                </button>
+
+                <button class="boton boton-azul confirmar-cambios" id="disposeConfirmWindowEvent">Cancelar</button>
+            
+            </div>
+
+        </section>
+
+    </div>
+
+</body>
+</html>

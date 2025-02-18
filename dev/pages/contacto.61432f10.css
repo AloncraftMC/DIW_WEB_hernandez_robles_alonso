@@ -1,0 +1,609 @@
+@font-face {
+  font-family: Rubik Light;
+  src: url("../Rubik-Light.30b631eb.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Rubik Regular;
+  src: url("../Rubik-Regular.44063caa.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Rubik Medium;
+  src: url("../Rubik-Medium.0173dc99.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #fff;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  font-family: Rubik Medium, sans-serif;
+  display: flex;
+}
+
+header {
+  color: #000;
+  z-index: 0;
+  background-color: #fff;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 2rem;
+  display: flex;
+  box-shadow: 0 0 10px #000;
+}
+
+.header-izquierdo {
+  align-items: center;
+  gap: 1.5rem;
+  display: flex;
+}
+
+.header-izquierdo h1 {
+  font-size: 1.5rem;
+}
+
+.header-izquierdo a {
+  color: #000;
+  background-color: #8fe1ff;
+  border-radius: .7em;
+  padding: .5rem 1rem;
+  font-family: Rubik Regular, sans-serif;
+  text-decoration: none;
+  transition: filter .2s;
+}
+
+.header-izquierdo a:hover {
+  filter: brightness(.75);
+}
+
+.header-derecho {
+  flex-direction: row;
+  align-items: center;
+  gap: 1em;
+  display: flex;
+}
+
+.header-derecho img {
+  cursor: pointer;
+  border-right: 1em;
+}
+
+.header-derecho img:first-child {
+  width: 2em;
+  height: 2em;
+  transition: all 1s;
+}
+
+.header-derecho img:first-child:hover {
+  transform: rotate(360deg);
+}
+
+.header-derecho img:nth-child(2) {
+  object-fit: cover;
+  border-radius: 50%;
+  width: 3em;
+  height: 3em;
+  overflow: hidden;
+}
+
+.texto-usuario {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.texto-usuario p {
+  margin: .25em;
+}
+
+.texto-usuario .nombre-usuario {
+  font-family: Rubik Regular, sans-serif;
+}
+
+.texto-usuario .medallas-usuario {
+  text-align: center;
+  font-family: Rubik Light, sans-serif;
+}
+
+main {
+  text-align: center;
+  color: #fff;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+main h1 {
+  font-size: 2rem;
+}
+
+footer {
+  color: #d3d3d3;
+  background-color: #2d2d2d;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 2rem;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  position: relative;
+  top: 1rem;
+}
+
+footer a {
+  color: #d3d3d3;
+  font-family: Rubik Regular, sans-serif;
+  text-decoration: none;
+  transition: color .2s;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+.configuracion {
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  width: 100%;
+  display: flex;
+}
+
+.configuracion label {
+  color: #000;
+  font-family: Rubik Regular, sans-serif;
+  font-size: 1.5rem;
+  line-height: 1;
+  transform: translate(0%, -70%);
+}
+
+.configuracion input[type="checkbox"] {
+  cursor: pointer;
+  accent-color: #8fe1ff;
+  width: 2em;
+  min-width: 1em;
+  height: 2em;
+  display: inline-block;
+}
+
+.boton {
+  text-align: center;
+  cursor: pointer;
+  border: .5vh solid #000;
+  border-radius: 2vh;
+  outline: none;
+  width: 30vh;
+  padding-top: 2.25vh;
+  padding-bottom: 2.25vh;
+  font-family: Rubik Light, sans-serif;
+  font-size: 2vw;
+  transition: filter .2s ease-in-out;
+  box-shadow: 0 .5vw 1vw #00000080;
+}
+
+.boton:hover {
+  filter: brightness(.75);
+}
+
+.boton-blanco {
+  color: #000;
+  background-color: #fff;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: .4em;
+  display: flex;
+}
+
+.boton-blanco img {
+  width: 1em;
+}
+
+.boton-azul {
+  color: #fff;
+  background-color: #064156;
+}
+
+.confirmar-cambios {
+  color: #000;
+  background-color: #8fe1ff;
+}
+
+.ventana-configuracion, .ventana-usuario, .ventana-confirmacion {
+  z-index: 1;
+  background-color: #00000080;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.contenido-ventana {
+  text-align: left;
+  color: #000;
+  background-color: #fff;
+  border-radius: 4vh;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 80vh;
+  padding: 6vh;
+  display: flex;
+  transform: scale(.7);
+}
+
+.contenido-ventana .informacion-usuario {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.contenido-ventana .informacion-usuario img {
+  width: 5rem;
+  height: 5rem;
+  margin-bottom: 1em;
+}
+
+.contenido-ventana .informacion-usuario p {
+  margin: .4em;
+  font-size: 120%;
+}
+
+.contenido-ventana .informacion-usuario .nombre-usuario {
+  font-family: Rubik Regular, sans-serif;
+  font-size: 200%;
+}
+
+.contenido-ventana .informacion-usuario .medallas-usuario {
+  font-family: Rubik Light, sans-serif;
+}
+
+.titulo-ventana {
+  text-align: center;
+  margin-top: 0;
+  font-family: Rubik Medium, sans-serif;
+  font-size: 4vh;
+}
+
+.contenido-ventana section label, .contenido-ventana section section label {
+  margin-top: 4vh;
+  font-family: Rubik Regular, sans-serif;
+  font-size: 3vh;
+}
+
+.contenido-ventana section input, .contenido-ventana section section input {
+  border: .4vh solid #ccc;
+  border-radius: 2vh;
+  width: 85%;
+  margin: 1vh 0 3vh;
+  padding: 2vh;
+  font-family: Rubik Light, sans-serif;
+  font-size: 3vh;
+}
+
+.contenido-ventana div .boton {
+  text-align: center;
+  border: .5vh solid #000;
+  width: auto;
+  margin-top: 4vh;
+  padding: 2.4vh;
+  font-size: 4.4vh;
+}
+
+.botones-ventana {
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  display: flex;
+}
+
+#userAlreadyRegistered, #passwordNotLongEnough {
+  color: red;
+  text-align: left;
+  margin-top: 0;
+  font-family: Rubik Light, sans-serif;
+  font-size: 1.4em;
+  display: none;
+}
+
+#changedData {
+  color: green;
+  text-align: left;
+  margin-top: 0;
+  font-family: Rubik Light, sans-serif;
+  font-size: 1.7em;
+  display: none;
+}
+
+.ventana-confirmacion .contenido-ventana {
+  gap: 0;
+  width: 40em;
+}
+
+.ventana-confirmacion .contenido-ventana .titulo-ventana {
+  font-family: Rubik Regular, sans-serif;
+}
+
+.avatar-container {
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  margin: 2em;
+  overflow: hidden;
+  transform: scale(1.5);
+}
+
+.avatar-container .user-avatar {
+  object-fit: cover;
+  transition: opacity .3s;
+}
+
+.avatar-container .edit-icon {
+  opacity: 0;
+  width: 1em;
+  height: 1em;
+  transition: opacity .2s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)scale(.5);
+}
+
+.avatar-container input {
+  display: none;
+}
+
+.avatar-container:hover {
+  cursor: pointer;
+}
+
+.avatar-container:hover .user-avatar {
+  opacity: .5;
+}
+
+.avatar-container:hover .edit-icon {
+  opacity: 1;
+}
+
+@media (width <= 768px) {
+  header {
+    height: 5em;
+  }
+
+  header h1 {
+    display: none;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  .header-derecho {
+    gap: 1em;
+  }
+
+  #passwordNotLongEnough, #userAlreadyRegistered, #changedData {
+    font-size: 1.2em;
+  }
+}
+
+@media (width <= 480px) {
+  header, main {
+    overflow: scroll;
+  }
+
+  .header-derecho {
+    margin-right: 1em;
+  }
+
+  .header-derecho .texto-usuario {
+    display: none;
+  }
+
+  .header-derecho img:first-child {
+    margin-left: 2em;
+  }
+
+  .contenido-ventana {
+    position: inherit;
+    gap: 50%;
+    width: 120%;
+    transform: scale(.8);
+  }
+
+  .informacion-usuario {
+    margin: 1em;
+  }
+
+  button, input {
+    overflow: hidden;
+  }
+
+  #passwordNotLongEnough, #userAlreadyRegistered, #changedData {
+    font-size: 1em;
+  }
+}
+
+body {
+  background-color: #01203c;
+}
+
+.contenedor-contacto {
+  flex-direction: row;
+  justify-content: space-around;
+  display: flex;
+}
+
+.seccion-mapa, .seccion-formulario {
+  flex-direction: column;
+  width: 40%;
+  display: flex;
+}
+
+.seccion-mapa h1, .seccion-formulario h1 {
+  font-family: Rubik Light, sans-serif;
+  font-size: 1.5em;
+}
+
+iframe {
+  border: .4vw solid #000;
+  border-radius: 2vw;
+  height: 30rem;
+}
+
+form {
+  flex-direction: column;
+  gap: 2rem;
+  display: flex;
+}
+
+.inputs-formulario {
+  background-color: #91e2ff80;
+  border: .4vw solid #000;
+  border-radius: 2vw;
+  flex-direction: column;
+  padding: 2rem;
+  display: flex;
+}
+
+.inputs-formulario input, .inputs-formulario textarea {
+  resize: vertical;
+  background-color: #cef2fff4;
+  border: .1em solid #000;
+  border-radius: 1rem;
+  margin: .6rem;
+  padding: 3%;
+  font-family: Rubik Light, sans-serif;
+  font-size: 1.5rem;
+  overflow: auto;
+}
+
+.inputs-formulario textarea {
+  border-radius: 1rem 1rem 4rem;
+  height: 15rem;
+  min-height: 10rem;
+  max-height: 30rem;
+}
+
+.contenedor-boton {
+  flex-direction: row;
+  justify-content: center;
+  display: flex;
+}
+
+.boton-enviar {
+  background-color: #fff;
+  border: .15em solid #000;
+  border-radius: 1vw;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 8rem;
+  height: 4rem;
+  font-family: Rubik Light, sans-serif;
+  font-size: 1.5rem;
+  transition: filter .2s;
+  display: flex;
+}
+
+.boton-enviar:hover {
+  cursor: pointer;
+  filter: brightness(.75);
+}
+
+main {
+  background-image: url("../contactoFondo3200.d3dfb191.avif"), url("../contactoFondo3200.8eedbc60.webp"), url("../contactoFondo3200.e32cd90e.jpg");
+}
+
+@media (width <= 2560px) {
+  main {
+    background-image: url("../contactoFondo2560.2c0bf53b.avif"), url("../contactoFondo2560.334461c8.webp"), url("../contactoFondo2560.e9e7e98b.jpg");
+  }
+}
+
+@media (width <= 1920px) {
+  main {
+    background-image: url("../contactoFondo1920.ecb537a5.avif"), url("../contactoFondo1920.31680a5e.webp"), url("../contactoFondo1920.bb378ab3.jpg");
+  }
+}
+
+@media (width <= 1200px) {
+  main {
+    background-image: url("../contactoFondo1200.6e76800c.avif"), url("../contactoFondo1200.2c889c4f.webp"), url("../contactoFondo1200.7a67cfa8.jpg");
+  }
+
+  .contenedor-contacto {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .seccion-mapa {
+    width: 80%;
+  }
+
+  .seccion-formulario {
+    width: 40em;
+    margin-bottom: 7em;
+  }
+}
+
+@media (width <= 768px) {
+  main {
+    background-image: url("../contactoFondo768.f8d3d0e6.avif"), url("../contactoFondo768.f5a07ae3.webp"), url("../contactoFondo768.62be0192.jpg");
+  }
+
+  .seccion-formulario {
+    width: 30em;
+    margin-bottom: 10em;
+  }
+
+  .boton-enviar {
+    border-radius: 1rem;
+  }
+}
+
+@media (width <= 480px) {
+  main {
+    background-image: url("../contactoFondo480.9eb4ab3e.avif"), url("../contactoFondo480.bb2b7534.webp"), url("../contactoFondo480.70938878.jpg");
+  }
+
+  .seccion-mapa {
+    width: 100vw;
+  }
+
+  iframe {
+    border: 0;
+    border-radius: 0;
+  }
+
+  .seccion-formulario {
+    width: 100vw;
+  }
+
+  .inputs-formulario {
+    border: 0;
+    border-radius: 0;
+  }
+}
+/*# sourceMappingURL=contacto.61432f10.css.map */

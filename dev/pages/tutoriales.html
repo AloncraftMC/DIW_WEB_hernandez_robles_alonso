@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goal Tracker - Tutoriales</title>
+    <link rel="stylesheet" href="/pages/tutoriales.95a274c6.css" type="text/css">
+    <link rel="icon" href="/favicon.7a64f7a4.ico" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <script src="/pages/contacto.aa60024c.js" defer=""></script>
+
+</head>
+
+<body>
+
+    <header>
+
+        <section class="header-izquierdo">
+
+            <h1>GOAL TRACKER</h1>
+            <a href="/pages/editor.html">Editor</a>
+            <a href="/pages/contacto.html">Contacto</a>
+
+        </section>
+
+        <section class="header-derecho">
+
+            <img src="/configuracion.578db3b9.svg" alt="Configuración" id="openConfigWindowEvent">
+            <img src="/user.a5778ab0.png" id="userAvatar" class="openUserWindowEvent">
+            
+            <section class="texto-usuario">
+                <p class="nombre-usuario" id="userName">Usuario</p>
+                <p class="medallas-usuario">(0/0) Medallas</p>
+            </section>
+
+        </section>
+
+    </header>
+
+    <main>
+
+        <h1>Tutoriales</h1>
+
+        <section class="contenedor-tutoriales">
+
+            <article class="contenedor-tutorial">
+
+                <img src="/tutorial1.493afd57.png">
+
+                <section class="contenedor-texto">
+
+                    <h2>Tutorial 1: Creación</h2>
+                    <ul>
+                        <li>Para crear tu primera medalla, haz clic en el "+" del centro del lienzo o en el botón "Crear...". Si usas este botón, después, haz clic en "Medalla". Para crear objetivos, debes usar también el botón de "Crear...". Selecciona la medalla a la cual va a pertenecer tu objetivo y, después, haz clic en "Crear..." > "Objetivo".</li>
+                        <li>Si quieres crear una carpeta de nodos, selecciona "Carpeta de Medallas" o "Carpeta de Objetivos". Todo lo que crees se añadirá al lienzo de forma visible.</li>
+                    </ul>
+
+                </section>
+
+            </article>
+
+            <div class="barra-divisora"></div>
+
+            <article class="contenedor-tutorial">
+
+                <section class="contenedor-texto">
+
+                    <h2>Tutorial 2: Personalización de Nodos</h2>
+
+                    <ul>
+                        <li>
+                            Puedes personalizar el aspecto de un nodo eligiendo un color con el que se transparente en el lienzo, además de una imagen representativa que puedes subir directamente desde tu ordenador.
+                        </li>
+                        <li>
+                            Para ello, haz clic en el cuadrado de color correspondiente a tu medalla y elige el color que más te guste. Para subir una imagen, haz clic directamente en el icono de la medalla y podrás elegir un archivo de imagen local.
+                        </li>
+                    </ul>
+
+                </section>
+
+                <img src="/tutorial2.b0cb2722.png">
+
+            </article>
+
+            <div class="barra-divisora"></div>
+
+            <article class="contenedor-tutorial">
+
+                <img src="/tutorial3.2cced60e.png">
+
+                <section class="contenedor-texto">
+
+                    <h2>Tutorial 3: Modificación de Nodos</h2>
+
+                    <ul>
+                        <li>
+                            Para añadir información explicativa acerca de tu nodo, ya sea una medalla o un objetivo, puedes hacer clic directamente sobre el pictograma del lápiz (<img src="/editar.8ef59e04.svg">) y el texto correspondiente al campo que quieras modificar se podrá editar. Puedes modificar el título de tu nodo, añadir una descripción e incluso atributos personalizados con valores.
+                        </li>
+                        <li>
+                            De la misma forma, puedes eliminar atributos de un nodo que ya no necesites con el pictograma del prohibido (<img src="/eliminar.796d6ebb.svg">).
+                        </li>
+                    </ul>
+
+                </section>
+
+            </article>
+
+            <div class="barra-divisora"></div>
+
+            <article class="contenedor-tutorial">
+
+                <section class="contenedor-texto">
+
+                    <h2>Tutorial 4: Gestión de Usuario y Configuración</h2>
+
+                    <ul>
+                        <li>
+                            Si haces clic sobre tu icono de perfil, podrás configurar tu cuenta de usuario, es decir, tu nombre, imagen y contraseña asociada. Cuando termines, presiona en "Confirmar cambios".
+                        </li>
+                        <li>
+                            Desde aquí también puedes cerrar la sesión de tu usuario o borrar tu cuenta (no te preocupes, te preguntaremos por tu confirmación al presionar el botón) haciendo clic en los botones correspondientes.
+                        </li>
+                        <li>
+                            Presionando el pictograma del engranaje (<img src="/configuracion.578db3b9.svg">) podrás acceder a la configuración y silenciar la aplicación.
+                        </li>
+                    </ul>
+
+                </section>
+
+                <img src="/tutorial4.dfc7f9fe.png">
+
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <a href="#">Condiciones de Uso</a>
+        <a href="#">Política de Privacidad</a>
+        <a href="#">Sobre Nosotros</a>
+    </footer>
+
+    <div class="ventana-configuracion" id="configWindow">
+
+        <section class="contenido-ventana">
+
+            <p class="titulo-ventana">Configuración</p>
+
+            <section class="configuracion">
+                <label for="sonido">Efectos de sonido:</label>
+                <input type="checkbox" name="sonido" id="soundCheckbox">
+            </section>
+
+            <div class="botones-ventana">
+                <button class="boton boton-azul confirmar-cambios" id="disposeConfigWindowEvent">Aceptar</button>
+            </div>
+
+        </section>
+        
+    </div>
+
+    <div class="ventana-usuario" id="userWindow">
+        
+        <section class="contenido-ventana" id="windowContent">
+
+            <section class="informacion-usuario">
+
+                <div class="avatar-container">
+
+                    <img src="/user.a5778ab0.png" class="user-avatar" id="userAvatar">
+                    <img src="/editar.8ef59e04.svg" class="edit-icon" id="editIcon">
+                    <input type="file" id="fileInput">
+
+                </div>
+
+                <p class="nombre-usuario" id="userName">Usuario</p>
+                <p class="medallas-usuario">(0/0) Medallas</p>
+
+            </section>
+
+            <section class="campos-usuario">
+
+                <section>
+                    <label for="cambiarNombre">Cambiar nombre de usuario:</label>
+                    <input type="text" name="cambiarNombre" id="changeUsernameInput">
+                </section>
+
+                <section>
+                    <label for="cambiarContrasena">Cambiar contraseña:</label>
+                    <input type="password" name="cambiarContrasena" id="changePasswordInput">
+                </section>
+
+                <section>
+                    <p id="passwordNotLongEnough">La contraseña debe tener 8 caracteres como mínimo.</p>
+                    <p id="userAlreadyRegistered">Este usuario ya se encuentra registrado.</p>
+                    <p id="changedData">
+                        <i class="fa-solid fa-check"></i>
+                        Cambios guardados correctamente.
+                    </p>
+                </section>
+
+            </section>
+
+            <div class="botones-ventana">
+                
+                <button class="boton boton-azul confirmar-cambios" id="confirmChangesEvent">Confirmar cambios</button>
+
+                <input type="submit" class="boton boton-azul" value="Cerrar sesión" id="logoutSessionEvent">
+
+                <button class="boton boton-blanco" id="openConfirmWindowEvent">
+                    <img src="/papelera.0d2e415a.svg">
+                    Borrar cuenta
+                </button>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <div class="ventana-confirmacion" id="confirmWindow">
+
+        <section class="contenido-ventana">
+
+            <p class="titulo-ventana" id="confirmText">¿Estás seguro que quieres borrar?</p>
+
+            <div class="botones-ventana">
+
+                <button class="boton boton-blanco" id="deleteAccountEvent">
+                    <img src="/papelera.0d2e415a.svg">
+                    Borrar
+                </button>
+
+                <button class="boton boton-azul confirmar-cambios" id="disposeConfirmWindowEvent">Cancelar</button>
+            
+            </div>
+
+        </section>
+
+    </div>
+
+</body>
+</html>

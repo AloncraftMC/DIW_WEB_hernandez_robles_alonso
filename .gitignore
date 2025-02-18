@@ -1,1 +1,4 @@
 node_modules
+vite.config.js
+webpack.config.js
+.parcel-cache

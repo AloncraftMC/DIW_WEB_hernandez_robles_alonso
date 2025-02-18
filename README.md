@@ -2,7 +2,7 @@
 
 ## Índice de Contenidos
 
-- [Tarea 12 - Web Completa]()
+- [Tarea 12 - Web Completa](#tarea-12---web-completa)
 - [Tarea 10 - Preparando Imágenes para Reactividad](#tarea-10---preparando-imágenes-para-reactividad)
 - [Tarea 9 - Preparando Recursos](#tarea-9---preparando-recursos)
 - [Antigua Tarea 9 - Preparando Recursos](#antigua-tarea-9---preparando-recursos)

@@ -79,7 +79,7 @@ async function openConfigWindow() {
 
         if(soundCheckbox.checked){
 
-            new Audio("../media/audio/flac/rellenar.flac").play();
+            new Audio("src/media/audio/flac/rellenar.flac").play();
 
         }
 

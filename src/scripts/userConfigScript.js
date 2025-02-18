@@ -73,7 +73,7 @@ async function openConfigWindow() {
 
     const soundCheckbox = document.getElementById("soundCheckbox");
 
-    soundCheckbox.addEventListener("change", ()=>{
+    soundCheckbox.addEventListener("change", () => {
 
         setSound(soundCheckbox.checked);
 

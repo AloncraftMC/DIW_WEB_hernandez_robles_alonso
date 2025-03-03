@@ -6,9 +6,9 @@
 /* Cuerpo de la página */
 body {
     background-image: 
-        url('/media/images/avif/aterrizajeFondo3200.avif'),
-        url('/media/images/webp/aterrizajeFondo3200.webp'),
-        url('/media/images/jpg/aterrizajeFondo3200.jpg');
+        url('../../media/images/avif/aterrizajeFondo3200.avif'),
+        url('../../media/images/webp/aterrizajeFondo3200.webp'),
+        url('../../media/images/jpg/aterrizajeFondo3200.jpg');
     background-size: cover;
     background-position: center;
     margin: 0;
@@ -194,27 +194,27 @@ main {
 @include respond-to('pantallaGrande') {
     body {
         background-image: 
-        url('/media/images/avif/aterrizajeFondo2560.avif'),
-        url('/media/images/webp/aterrizajeFondo2560.webp'),
-        url('/media/images/jpg/aterrizajeFondo2560.jpg');
+        url('../../media/images/avif/aterrizajeFondo2560.avif'),
+        url('../../media/images/webp/aterrizajeFondo2560.webp'),
+        url('../../media/images/jpg/aterrizajeFondo2560.jpg');
     }
 }
 
 @include respond-to('pantallaEstandar') {
     body {
         background-image: 
-        url('/media/images/avif/aterrizajeFondo1920.avif'),
-        url('/media/images/webp/aterrizajeFondo1920.webp'),
-        url('/media/images/jpg/aterrizajeFondo1920.jpg');
+        url('../../media/images/avif/aterrizajeFondo1920.avif'),
+        url('../../media/images/webp/aterrizajeFondo1920.webp'),
+        url('../../media/images/jpg/aterrizajeFondo1920.jpg');
     }
 }
 
 @include respond-to('pantallaPequena') {
     body {
         background-image: 
-        url('/media/images/avif/aterrizajeFondo1200.avif'),
-        url('/media/images/webp/aterrizajeFondo1200.webp'),
-        url('/media/images/jpg/aterrizajeFondo1200.jpg');
+        url('../../media/images/avif/aterrizajeFondo1200.avif'),
+        url('../../media/images/webp/aterrizajeFondo1200.webp'),
+        url('../../media/images/jpg/aterrizajeFondo1200.jpg');
     }
     .botones {
         flex-direction: column;
@@ -229,9 +229,9 @@ main {
 @include respond-to('tableta') {
     body {
         background-image: 
-        url('/media/images/avif/aterrizajeFondo768.avif'),
-        url('/media/images/webp/aterrizajeFondo768.webp'),
-        url('/media/images/jpg/aterrizajeFondo768.jpg');
+        url('../../media/images/avif/aterrizajeFondo768.avif'),
+        url('../../media/images/webp/aterrizajeFondo768.webp'),
+        url('../../media/images/jpg/aterrizajeFondo768.jpg');
     }
     .contenido-ventana {
         transform: scale(0.8);
@@ -244,9 +244,9 @@ main {
 @include respond-to('movil') {
     body {
         background-image: 
-        url('/media/images/avif/aterrizajeFondo480.avif'),
-        url('/media/images/webp/aterrizajeFondo480.webp'),
-        url('/media/images/jpg/aterrizajeFondo480.jpg');
+        url('../../media/images/avif/aterrizajeFondo480.avif'),
+        url('../../media/images/webp/aterrizajeFondo480.webp'),
+        url('../../media/images/jpg/aterrizajeFondo480.jpg');
     }
     .titulo-goal-tracker {
         font-size: calc(5vh + 2vw);

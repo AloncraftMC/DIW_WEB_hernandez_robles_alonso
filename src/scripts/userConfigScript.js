@@ -18,7 +18,7 @@ function redirect() {
 
     if(getCurrentUser() == null){
         
-        const finalURL = new URL("../index.html", import.meta.url); // (=> Después de Tarea 11)
+        const finalURL = new URL("../../index.html", import.meta.url); // (=> Después de Tarea 11)
         window.location.href = finalURL.href;
     
     }
@@ -79,7 +79,7 @@ async function openConfigWindow() {
 
         if(soundCheckbox.checked){
 
-            new Audio("src/media/audio/flac/rellenar.flac").play();
+            new Audio("../media/audio/flac/rellenar.flac").play();
 
         }
 

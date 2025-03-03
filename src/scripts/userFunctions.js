@@ -36,7 +36,7 @@ function logout(){
 
     if(getCurrentUser() == null){
         
-        const finalURL = new URL("../index.html", import.meta.url);
+        const finalURL = new URL("../../index.html", import.meta.url);
         window.location.href = finalURL.href;
     
     }

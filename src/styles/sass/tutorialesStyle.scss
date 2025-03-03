@@ -12,9 +12,9 @@ main{
     flex-direction: column;
     align-items: center;
     background-image:
-        url('../../media/images/avif/tutorialesFondo3200.avif'),
-        url('../../media/images/webp/tutorialesFondo3200.webp'),
-        url('../../media/images/jpg/tutorialesFondo3200.jpg');
+        url('../src/media/images/avif/tutorialesFondo3200.avif'),
+        url('../src/media/images/webp/tutorialesFondo3200.webp'),
+        url('../src/media/images/jpg/tutorialesFondo3200.jpg');
 }
 
 /* El contenedor del contenido de la página en el main */
@@ -93,27 +93,27 @@ main{
 @include respond-to('pantallaGrande') {
     main {
         background-image: 
-        url('../../media/images/avif/tutorialesFondo2560.avif'),
-        url('../../media/images/webp/tutorialesFondo2560.webp'),
-        url('../../media/images/jpg/tutorialesFondo2560.jpg');
+        url('../src/media/images/avif/tutorialesFondo2560.avif'),
+        url('../src/media/images/webp/tutorialesFondo2560.webp'),
+        url('../src/media/images/jpg/tutorialesFondo2560.jpg');
     }
 }
 
 @include respond-to('pantallaEstandar') {
     main {
         background-image: 
-        url('../../media/images/avif/tutorialesFondo1920.avif'),
-        url('../../media/images/webp/tutorialesFondo1920.webp'),
-        url('../../media/images/jpg/tutorialesFondo1920.jpg');
+        url('../src/media/images/avif/tutorialesFondo1920.avif'),
+        url('../src/media/images/webp/tutorialesFondo1920.webp'),
+        url('../src/media/images/jpg/tutorialesFondo1920.jpg');
     }
 }
 
 @include respond-to('pantallaPequena') {
     main {
         background-image: 
-        url('../../media/images/avif/tutorialesFondo1200.avif'),
-        url('../../media/images/webp/tutorialesFondo1200.webp'),
-        url('../../media/images/jpg/tutorialesFondo1200.jpg');
+        url('../src/media/images/avif/tutorialesFondo1200.avif'),
+        url('../src/media/images/webp/tutorialesFondo1200.webp'),
+        url('../src/media/images/jpg/tutorialesFondo1200.jpg');
     }
 }
 
@@ -121,9 +121,9 @@ main{
 
     main {
         background-image: 
-        url('../../media/images/avif/tutorialesFondo768.avif'),
-        url('../../media/images/webp/tutorialesFondo768.webp'),
-        url('../../media/images/jpg/tutorialesFondo768.jpg');
+        url('../src/media/images/avif/tutorialesFondo768.avif'),
+        url('../src/media/images/webp/tutorialesFondo768.webp'),
+        url('../src/media/images/jpg/tutorialesFondo768.jpg');
     }
 
     .contenedor-tutorial{
@@ -142,9 +142,9 @@ main{
 
     main {
         background-image: 
-        url('../../media/images/avif/tutorialesFondo480.avif'),
-        url('../../media/images/webp/tutorialesFondo480.webp'),
-        url('../../media/images/jpg/tutorialesFondo480.jpg');
+        url('../src/media/images/avif/tutorialesFondo480.avif'),
+        url('../src/media/images/webp/tutorialesFondo480.webp'),
+        url('../src/media/images/jpg/tutorialesFondo480.jpg');
     }
 
     .contenedor-tutorial{

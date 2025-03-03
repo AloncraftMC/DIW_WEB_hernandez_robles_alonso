@@ -12,7 +12,7 @@
 
 ## Tarea 12 - Web Completa
 
-La aplicación se puede probar en el enlace [http://aloncraftmc.github.io/DIW_WEB_hernandez_robles_alonso/src/](http://aloncraftmc.github.io/DIW_WEB_hernandez_robles_alonso/src/index.html)
+La aplicación se puede probar en el enlace [http://aloncraftmc.github.io/DIW_WEB_hernandez_robles_alonso/](http://aloncraftmc.github.io/DIW_WEB_hernandez_robles_alonso/index.html)
 
 ## Tarea 10 - Preparando imágenes para reactividad
 

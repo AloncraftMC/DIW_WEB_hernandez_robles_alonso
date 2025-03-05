@@ -18,14 +18,14 @@
         <p class="titulo-goal-tracker">Goal<br>Tracker</p>
         <p class="subtitulo-crea-gestiona">Crea y gestiona<br>tus propios objetivos</p>
         
-        <div class="botones">
+        <section class="botones">
             <button class="boton boton-blanco" id="openLoginWindowEvent">Iniciar Sesión</button>
             <button class="boton boton-azul" id="openRegisterWindowEvent">Registrarse</button>
-        </div>
+        </section>
         
     </main>
 
-    <div class="ventana-login" id="loginWindow">
+    <section class="ventana-login" id="loginWindow">
         
         <form class="contenido-ventana" onsubmit="event.preventDefault();">
 
@@ -40,15 +40,15 @@
             <p id="userNotFound">No se ha encontrado el usuario.</p>
             <p id="incorrectPassword">La contraseña es incorrecta.</p>
 
-            <div class="botones-ventana">
+            <section class="botones-ventana">
                 <input type="submit" class="boton boton-azul" value="Entrar" id="loginEvent">
-            </div>
+            </section>
 
         </form>
 
-    </div>
+    </section>
 
-    <div class="ventana-registro" id="registerWindow">
+    <section class="ventana-registro" id="registerWindow">
 
         <form class="contenido-ventana" onsubmit="event.preventDefault();">
 
@@ -67,13 +67,13 @@
             <p id="passwordsDontMatch">Las contraseñas no coinciden.</p>
             <p id="userAlreadyRegistered">Este usuario ya se encuentra registrado.</p>
 
-            <div class="botones-ventana">
+            <section class="botones-ventana">
                 <input type="submit" class="boton boton-azul" value="Registrarse" id="registerEvent">
-            </div>
+            </section>
 
         </form>
         
-    </div>
+    </section>
     
 </body>
 </html>

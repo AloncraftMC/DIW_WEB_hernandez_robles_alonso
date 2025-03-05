@@ -58,7 +58,7 @@ main {
 
 /* Contenedor de botones "Iniciar Sesión" y "Registrarse" */
 .botones {
-  transform: scale(0.8);
+  transform: scale(0.5);
   margin: 0;
   margin-top: 10vh;
   display: flex;

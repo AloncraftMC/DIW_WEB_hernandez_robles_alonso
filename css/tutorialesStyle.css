@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
 @font-face {
   font-family: "Rubik Light";
   src: url("../src/media/fonts/Rubik-Light.ttf") format("truetype");
@@ -441,9 +442,6 @@ body {
 main {
   width: 100%;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background-image: url("../src/media/images/avif/tutorialesFondo3200.avif"), url("../src/media/images/webp/tutorialesFondo3200.webp"), url("../src/media/images/jpg/tutorialesFondo3200.jpg");
 }
 

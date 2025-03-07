@@ -19,7 +19,8 @@
 }
 /* Cuerpo de la página */
 body {
-  background-image: url("../src/media/images/avif/aterrizajeFondo3200.avif"), url("../src/media/images/webp/aterrizajeFondo3200.webp"), url("../src/media/images/jpg/aterrizajeFondo3200.jpg");
+  background-image: url("../src/media/images/jpg/aterrizajeFondo3200.jpg");
+  background-image: image-set(url("../src/media/images/avif/aterrizajeFondo3200.avif") type("image/avif"), url("../src/media/images/webp/aterrizajeFondo3200.webp") type("image/webp"), url("../src/media/images/jpg/aterrizajeFondo3200.jpg") type("image/jpg"));
   background-size: cover;
   background-position: center;
   margin: 0;
@@ -122,6 +123,7 @@ main {
 
 /* Lo que es el widget de la ventana en sí */
 .contenido-ventana {
+  transform: scale(0.6);
   background-color: white;
   text-align: left;
   color: black;
@@ -194,17 +196,20 @@ main {
 /* Media queries para adaptar el formato (sobre todo de imagen) a las resoluciones requeridas */
 @media (max-width: 2560px) {
   body {
-    background-image: url("../src/media/images/avif/aterrizajeFondo2560.avif"), url("../src/media/images/webp/aterrizajeFondo2560.webp"), url("../src/media/images/jpg/aterrizajeFondo2560.jpg");
+    background-image: url("../src/media/images/jpg/aterrizajeFondo2560.jpg");
+    background-image: image-set(url("../src/media/images/avif/aterrizajeFondo2560.avif") type("image/avif"), url("../src/media/images/webp/aterrizajeFondo2560.webp") type("image/webp"), url("../src/media/images/jpg/aterrizajeFondo2560.jpg") type("image/jpg"));
   }
 }
 @media (max-width: 1920px) {
   body {
-    background-image: url("../src/media/images/avif/aterrizajeFondo1920.avif"), url("../src/media/images/webp/aterrizajeFondo1920.webp"), url("../src/media/images/jpg/aterrizajeFondo1920.jpg");
+    background-image: url("../src/media/images/jpg/aterrizajeFondo1920.jpg");
+    background-image: image-set(url("../src/media/images/avif/aterrizajeFondo1920.avif") type("image/avif"), url("../src/media/images/webp/aterrizajeFondo1920.webp") type("image/webp"), url("../src/media/images/jpg/aterrizajeFondo1920.jpg") type("image/jpg"));
   }
 }
 @media (max-width: 1200px) {
   body {
-    background-image: url("../src/media/images/avif/aterrizajeFondo1200.avif"), url("../src/media/images/webp/aterrizajeFondo1200.webp"), url("../src/media/images/jpg/aterrizajeFondo1200.jpg");
+    background-image: url("../src/media/images/jpg/aterrizajeFondo1200.jpg");
+    background-image: image-set(url("../src/media/images/avif/aterrizajeFondo1200.avif") type("image/avif"), url("../src/media/images/webp/aterrizajeFondo1200.webp") type("image/webp"), url("../src/media/images/jpg/aterrizajeFondo1200.jpg") type("image/jpg"));
   }
   .botones {
     flex-direction: column;
@@ -217,7 +222,8 @@ main {
 }
 @media (max-width: 768px) {
   body {
-    background-image: url("../src/media/images/avif/aterrizajeFondo768.avif"), url("../src/media/images/webp/aterrizajeFondo768.webp"), url("../src/media/images/jpg/aterrizajeFondo768.jpg");
+    background-image: url("../src/media/images/jpg/aterrizajeFondo768.jpg");
+    background-image: image-set(url("../src/media/images/avif/aterrizajeFondo768.avif") type("image/avif"), url("../src/media/images/webp/aterrizajeFondo768.webp") type("image/webp"), url("../src/media/images/jpg/aterrizajeFondo768.jpg") type("image/jpg"));
   }
   .contenido-ventana {
     transform: scale(0.8);
@@ -228,7 +234,8 @@ main {
 }
 @media (max-width: 480px) {
   body {
-    background-image: url("../src/media/images/avif/aterrizajeFondo480.avif"), url("../src/media/images/webp/aterrizajeFondo480.webp"), url("../src/media/images/jpg/aterrizajeFondo480.jpg");
+    background-image: url("../src/media/images/jpg/aterrizajeFondo480.jpg");
+    background-image: image-set(url("../src/media/images/avif/aterrizajeFondo480.avif") type("image/avif"), url("../src/media/images/webp/aterrizajeFondo480.webp") type("image/webp"), url("../src/media/images/jpg/aterrizajeFondo480.jpg") type("image/jpg"));
   }
   .titulo-goal-tracker {
     font-size: calc(5vh + 2vw);

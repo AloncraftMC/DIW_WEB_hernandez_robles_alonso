@@ -104,37 +104,45 @@ form{
 }
 
 main{
-    background-image:
-        url('../src/media/images/avif/contactoFondo3200.avif'),
-        url('../src/media/images/webp/contactoFondo3200.webp'),
-        url('../src/media/images/jpg/contactoFondo3200.jpg');
+    background-image: url('../../media/images/avif/contactoFondo3200.jpg');
+    background-image: image-set(
+        url('../../media/images/avif/contactoFondo3200.avif') type('image/avif'),
+        url('../../media/images/webp/contactoFondo3200.webp') type('image/webp'),
+        url('../../media/images/jpg/contactoFondo3200.jpg') type('image/jpg')
+    );
 }
 
 @include respond-to('pantallaGrande') {
     main {
-        background-image: 
-        url('../src/media/images/avif/contactoFondo2560.avif'),
-        url('../src/media/images/webp/contactoFondo2560.webp'),
-        url('../src/media/images/jpg/contactoFondo2560.jpg');
+        background-image: url('../../media/images/avif/contactoFondo2560.jpg');
+        background-image: image-set(
+            url('../../media/images/avif/contactoFondo2560.avif') type('image/avif'),
+            url('../../media/images/webp/contactoFondo2560.webp') type('image/webp'),
+            url('../../media/images/jpg/contactoFondo2560.jpg') type('image/jpg')
+        );
     }
 }
 
 @include respond-to('pantallaEstandar') {
     main {
-        background-image: 
-        url('../src/media/images/avif/contactoFondo1920.avif'),
-        url('../src/media/images/webp/contactoFondo1920.webp'),
-        url('../src/media/images/jpg/contactoFondo1920.jpg');
+        background-image: url('../../media/images/avif/contactoFondo1920.jpg');
+        background-image: image-set(
+            url('../../media/images/avif/contactoFondo1920.avif') type('image/avif'),
+            url('../../media/images/webp/contactoFondo1920.webp') type('image/webp'),
+            url('../../media/images/jpg/contactoFondo1920.jpg') type('image/jpg')
+        );
     }
 }
 
 @include respond-to('pantallaPequena') {
 
     main {
-        background-image: 
-        url('../src/media/images/avif/contactoFondo1200.avif'),
-        url('../src/media/images/webp/contactoFondo1200.webp'),
-        url('../src/media/images/jpg/contactoFondo1200.jpg');
+        background-image: url('../../media/images/avif/contactoFondo1200.jpg');
+        background-image: image-set(
+            url('../../media/images/avif/contactoFondo1200.avif') type('image/avif'),
+            url('../../media/images/webp/contactoFondo1200.webp') type('image/webp'),
+            url('../../media/images/jpg/contactoFondo1200.jpg') type('image/jpg')
+        );
     }
 
     .contenedor-contacto {
@@ -156,10 +164,12 @@ main{
 @include respond-to('tableta') {
 
     main {
-        background-image: 
-        url('../src/media/images/avif/contactoFondo768.avif'),
-        url('../src/media/images/webp/contactoFondo768.webp'),
-        url('../src/media/images/jpg/contactoFondo768.jpg');
+        background-image: url('../../media/images/avif/contactoFondo768.jpg');
+        background-image: image-set(
+            url('../../media/images/avif/contactoFondo768.avif') type('image/avif'),
+            url('../../media/images/webp/contactoFondo768.webp') type('image/webp'),
+            url('../../media/images/jpg/contactoFondo768.jpg') type('image/jpg')
+        );
     }
 
     .seccion-formulario{
@@ -176,10 +186,12 @@ main{
 @include respond-to('movil') {
 
     main {
-        background-image: 
-        url('../src/media/images/avif/contactoFondo480.avif'),
-        url('../src/media/images/webp/contactoFondo480.webp'),
-        url('../src/media/images/jpg/contactoFondo480.jpg');
+        background-image: url('../../media/images/avif/contactoFondo480.jpg');
+        background-image: image-set(
+            url('../../media/images/avif/contactoFondo480.avif') type('image/avif'),
+            url('../../media/images/webp/contactoFondo480.webp') type('image/webp'),
+            url('../../media/images/jpg/contactoFondo480.jpg') type('image/jpg')
+        );
     }
 
     .seccion-mapa{

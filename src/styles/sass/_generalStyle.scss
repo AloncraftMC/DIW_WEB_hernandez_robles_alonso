@@ -2,7 +2,7 @@
 @import 'variables';
 @import 'mixins';
 @import 'functions';
-@import '~@fortawesome/fontawesome-free/css/all.min.css';
+@import '../../../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
 
 /* Acomodar todos los elementos incluyendo lo de fuera (padding, border...) de los elementos en el cálculo de sus dimensiones */
 *{

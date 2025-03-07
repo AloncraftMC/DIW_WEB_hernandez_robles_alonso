@@ -19,14 +19,13 @@
   },
   "homepage": "https://github.com/AloncraftMC/DIW_WEB_hernandez_robles_alonso#readme",
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.13.3",
     "autoprefixer": "^10.4.0",
-    "parcel": "^2.0.0",
+    "parcel": "^2.13.3",
     "sass": "^1.47.0",
     "sass-loader": "^12.3.0"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.7.2",
-    "clean-css-cli": "^5.6.3",
-    "mkdirp": "^3.0.1"
+    "@fortawesome/fontawesome-free": "^6.7.2"
   }
 }
